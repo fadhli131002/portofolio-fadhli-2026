@@ -56,8 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if ('IntersectionObserver' in window) {
     const observerOptions = {
       root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.12
+      rootMargin: '0px 0px -20px 0px',
+      threshold: 0.05
     };
 
     const scrollObserver = new IntersectionObserver((entries) => {
@@ -80,7 +80,14 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }, observerOptions);
 
-    revealElements.forEach(el => scrollObserver.observe(el));
+    revealElements.forEach(el => {
+      scrollObserver.observe(el);
+      // Immediately reveal if already in or near viewport
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 150) {
+        el.classList.add('in-view');
+      }
+    });
   } else {
     // Fallback for older browsers
     revealElements.forEach(el => el.classList.add('in-view'));
@@ -848,6 +855,8 @@ document.addEventListener('DOMContentLoaded', () => {
         updateLightboxSlide(currentSlideIdx - 1); // Swipe right
       }
     }, { passive: true });
+  }
+
   // --- 8. Bilingual Language Switcher (Indonesian & English) ---
   const translations = {
     id: {
