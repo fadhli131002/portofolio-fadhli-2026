@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const heroToggleBtn = document.getElementById('hero-video-toggle');
   const heroToggleIcon = document.getElementById('hero-toggle-icon');
 
+  let isWallPaused = false;
   if (heroToggleBtn) {
-    let isWallPaused = false;
     heroToggleBtn.addEventListener('click', () => {
       isWallPaused = !isWallPaused;
       heroWallVideos.forEach(vid => {
@@ -19,6 +19,23 @@ document.addEventListener('DOMContentLoaded', () => {
         heroToggleIcon.textContent = isWallPaused ? 'play_arrow' : 'pause';
       }
     });
+  }
+
+  // Optimize: Pause hero videos whenever user scrolls down past Hero section
+  const heroSection = document.getElementById('hero');
+  if (heroSection && 'IntersectionObserver' in window) {
+    const heroObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!isWallPaused) {
+          if (entry.isIntersecting) {
+            heroWallVideos.forEach(vid => vid.play().catch(() => {}));
+          } else {
+            heroWallVideos.forEach(vid => vid.pause());
+          }
+        }
+      });
+    }, { threshold: 0.05 });
+    heroObserver.observe(heroSection);
   }
 
   // --- 2. Scroll Indicator & Back to Top ---
@@ -113,10 +130,80 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           card.style.display = 'none';
           card.classList.remove('in-view');
+          const vid = card.querySelector('video.project-video');
+          if (vid) {
+            vid.pause();
+            vid.currentTime = 0;
+          }
         }
       });
     });
   });
+
+  // --- 5B. High-Performance On-Demand Video Preview Controller ---
+  // Completely eliminates lag: plays video only on user hover (Desktop) or center viewport (Mobile)
+  const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+  const videoCards = Array.from(projectCards).filter(c => c.querySelector('video.project-video'));
+
+  // 1. Desktop: Silk-smooth Hover-to-Play with graceful pause/reset
+  videoCards.forEach(card => {
+    const video = card.querySelector('video.project-video');
+    if (!video) return;
+
+    let playPromise = null;
+
+    card.addEventListener('mouseenter', () => {
+      if (card.offsetParent !== null) {
+        playPromise = video.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(() => {});
+        }
+      }
+    });
+
+    card.addEventListener('mouseleave', () => {
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          video.pause();
+          video.currentTime = 0;
+        }).catch(() => {
+          video.pause();
+        });
+      } else {
+        video.pause();
+      }
+    });
+  });
+
+  // 2. Mobile / Touch Devices: Observe viewport and only play the 1 active reel centered on screen
+  if (isTouchDevice && 'IntersectionObserver' in window) {
+    let currentlyPlayingVideo = null;
+    const mobileVideoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target.querySelector('video.project-video');
+        if (!video) return;
+
+        if (entry.isIntersecting && entry.target.offsetParent !== null) {
+          if (currentlyPlayingVideo && currentlyPlayingVideo !== video) {
+            currentlyPlayingVideo.pause();
+          }
+          currentlyPlayingVideo = video;
+          video.play().catch(() => {});
+        } else {
+          if (currentlyPlayingVideo === video) {
+            video.pause();
+            currentlyPlayingVideo = null;
+          }
+        }
+      });
+    }, {
+      root: null,
+      rootMargin: '-25% 0px -25% 0px',
+      threshold: 0.5
+    });
+
+    videoCards.forEach(card => mobileVideoObserver.observe(card));
+  }
 
   // --- 6. What I'm Doing (Services) Google Flow Focus Blur ---
   const servicesGrid = document.getElementById('services-grid') || document.querySelector('.services-grid');
@@ -268,6 +355,7 @@ document.addEventListener('DOMContentLoaded', () => {
         targetTranslateY = 0;
         cardWrapper.style.setProperty('--light-x', '50%');
         cardWrapper.style.setProperty('--light-y', '50%');
+        requestPhysicsTick();
       }
     });
 
@@ -282,6 +370,7 @@ document.addEventListener('DOMContentLoaded', () => {
         targetRotateY = Math.max(-24, Math.min(24, deltaX * 20));
         targetRotateX = Math.max(-22, Math.min(22, -deltaY * 18));
         targetRotateZ = Math.max(-6, Math.min(6, deltaX * 5));
+        requestPhysicsTick();
       }
     });
 
@@ -294,6 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dragDist = 0;
       cardWrapper.style.transition = 'none';
       e.preventDefault();
+      requestPhysicsTick();
     });
 
     // Window pointer move when dragging
@@ -313,6 +403,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       const bounds = getCardCenter();
       updateLight(e.clientX, e.clientY, bounds);
+      requestPhysicsTick();
     });
 
     // Pointer up: release with swing or flip
@@ -327,6 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
         targetTranslateX = 0;
         targetTranslateY = 0;
         targetRotateZ = 0;
+        requestPhysicsTick();
         return;
       }
 
@@ -334,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
       isSwinging = true;
       swingAngle = targetRotateZ;
       swingVelocity = (targetTranslateX / 12);
+      requestPhysicsTick();
     });
 
     // Flip button hints
@@ -343,11 +436,21 @@ document.addEventListener('DOMContentLoaded', () => {
         e.stopPropagation();
         isFlipped = !isFlipped;
         card3D.classList.toggle('flipped', isFlipped);
+        requestPhysicsTick();
       });
     });
 
-    // Physics Animation Loop
+    // Physics Animation Loop - on demand to conserve CPU and GPU cycles
     let lastTime = performance.now();
+    let physicsFrameId = null;
+
+    function requestPhysicsTick() {
+      if (!physicsFrameId) {
+        lastTime = performance.now();
+        physicsFrameId = requestAnimationFrame(animatePhysics);
+      }
+    }
+
     function animatePhysics(time) {
       const dt = Math.min(0.05, (time - lastTime) / 1000);
       lastTime = time;
@@ -387,10 +490,22 @@ document.addEventListener('DOMContentLoaded', () => {
         'rotateY(' + currentRotateY.toFixed(2) + 'deg) ' +
         'rotateZ(' + currentRotateZ.toFixed(2) + 'deg)';
 
-      requestAnimationFrame(animatePhysics);
+      const isMoving = isDragging || isSwinging ||
+        Math.abs(targetRotateX - currentRotateX) > 0.05 ||
+        Math.abs(targetRotateY - currentRotateY) > 0.05 ||
+        Math.abs(targetRotateZ - currentRotateZ) > 0.05 ||
+        Math.abs(targetTranslateX - currentTranslateX) > 0.05 ||
+        Math.abs(targetTranslateY - currentTranslateY) > 0.05;
+
+      if (isMoving) {
+        physicsFrameId = requestAnimationFrame(animatePhysics);
+      } else {
+        physicsFrameId = null;
+      }
     }
 
-    requestAnimationFrame(animatePhysics);
+    // Initial settle
+    requestPhysicsTick();
   }
 
   // --- 8. Software Mastery HUD & Dynamic Progress Bar Animation ---
@@ -579,6 +694,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // Close Projects Modal with GSAP fade out
   function closeProjectsModal() {
     if (!projectsModal || projectsModal.style.display === 'none') return;
+
+    const modalVideos = projectsModal.querySelectorAll('video');
+    modalVideos.forEach(v => {
+      v.pause();
+      v.currentTime = 0;
+    });
 
     if (window.gsap) {
       if (modalContainer) {

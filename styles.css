@@ -3276,6 +3276,10 @@ body {
   opacity: 1;
 }
 
+.project-card:has(video.project-video):hover .project-hover-overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .project-hover-btn {
   background: rgba(255, 255, 255, 0.18);
   border: 1px solid rgba(255, 255, 255, 0.45);
