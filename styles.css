@@ -2119,10 +2119,10 @@ body {
     max-width: 100%;
   }
   .back-to-top-btn {
-    bottom: 1.25rem;
-    right: 1.25rem;
-    width: 2.6rem;
-    height: 2.6rem;
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
   }
 }
 
@@ -2701,27 +2701,93 @@ body {
   border-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Back to Top Smooth Button */
+/* Portfolio Load More Container & Button */
+.portfolio-load-more-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 0 1.25rem 0;
+}
+
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.9rem 2.4rem;
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: var(--radius-pill, 9999px);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  cursor: pointer;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+  user-select: none;
+}
+
+.load-more-btn .material-icons {
+  font-size: 1.25rem;
+  transition: transform 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+.load-more-btn:hover .material-icons {
+  transform: translateY(3px);
+}
+
+.load-more-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+@media (max-width: 768px) {
+  .portfolio-load-more-container {
+    padding: 2rem 0 0.5rem 0;
+  }
+  .load-more-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 0.85rem 1.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Back to Top Smooth Floating Button */
 .back-to-top-btn {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
-  width: 3rem;
-  height: 3rem;
+  bottom: 20px;
+  right: 20px;
+  width: 48px;
+  height: 48px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(15, 15, 18, 0.75);
   backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #fff;
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 999;
+  z-index: 99;
   opacity: 0;
   pointer-events: none;
-  transform: translateY(20px);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(16px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, border-color 0.25s ease;
 }
 
 .back-to-top-btn.visible {
@@ -2731,10 +2797,15 @@ body {
 }
 
 .back-to-top-btn:hover {
-  background: #ffffff;
-  color: #000000;
-  transform: translateY(-4px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  background: rgba(30, 30, 38, 0.92);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.35);
+  transform: translateY(-3px) scale(1.06);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 16px rgba(255, 255, 255, 0.15);
+}
+
+.back-to-top-btn:active {
+  transform: translateY(0) scale(0.96);
 }
 /* Timeline Enhancements for Updated Resume */
 .timeline-period-badge {

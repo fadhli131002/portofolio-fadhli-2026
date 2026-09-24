@@ -49,19 +49,27 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // --- 2B. Floating Glassmorphism Back to Top Controller ---
   const backToTopBtn = document.getElementById('back-to-top-btn');
-  window.addEventListener('scroll', () => {
-    if (backToTopBtn) {
-      if (window.scrollY > 450) {
-        backToTopBtn.classList.add('visible');
-      } else {
-        backToTopBtn.classList.remove('visible');
-      }
-    }
-  });
-
   if (backToTopBtn) {
-    backToTopBtn.addEventListener('click', () => {
+    let scrollTicking = false;
+    window.addEventListener('scroll', () => {
+      if (!scrollTicking) {
+        window.requestAnimationFrame(() => {
+          const currentScroll = window.scrollY || document.documentElement.scrollTop || 0;
+          if (currentScroll > 300) {
+            backToTopBtn.classList.add('visible');
+          } else {
+            backToTopBtn.classList.remove('visible');
+          }
+          scrollTicking = false;
+        });
+        scrollTicking = true;
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   }
@@ -111,22 +119,22 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- 5. Portfolio Category Filtering ---
+  // --- 5. Portfolio Category Filtering & Load More Controller ---
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
+  const loadMoreBtn = document.getElementById('load-more-btn');
+  const loadMoreContainer = document.querySelector('.portfolio-load-more-container');
 
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const filter = btn.getAttribute('data-filter');
+  let currentPortfolioFilter = 'all';
+  let visibleAllCount = 4; // Requirement: Default shows ONLY 4 cards on "Semua Proyek"
 
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-
-      projectCards.forEach(card => {
-        const categories = (card.getAttribute('data-category') || '').trim().split(/\s+/);
-        if (filter === 'all' || categories.includes(filter)) {
+  function updatePortfolioDisplay() {
+    if (currentPortfolioFilter === 'all') {
+      const allCards = Array.from(projectCards);
+      allCards.forEach((card, index) => {
+        if (index < visibleAllCount) {
           card.style.display = 'flex';
-          setTimeout(() => card.classList.add('in-view'), 50);
+          setTimeout(() => card.classList.add('in-view'), 30);
         } else {
           card.style.display = 'none';
           card.classList.remove('in-view');
@@ -137,7 +145,66 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
+
+      // Show/hide Load More button
+      if (loadMoreContainer) {
+        if (visibleAllCount >= allCards.length) {
+          loadMoreContainer.style.display = 'none';
+        } else {
+          loadMoreContainer.style.display = 'flex';
+        }
+      }
+    } else {
+      // Category filter active: Show ALL matching category cards
+      projectCards.forEach(card => {
+        const categories = (card.getAttribute('data-category') || '').trim().split(/\s+/);
+        if (categories.includes(currentPortfolioFilter)) {
+          card.style.display = 'flex';
+          setTimeout(() => card.classList.add('in-view'), 30);
+        } else {
+          card.style.display = 'none';
+          card.classList.remove('in-view');
+          const vid = card.querySelector('video.project-video');
+          if (vid) {
+            vid.pause();
+            vid.currentTime = 0;
+          }
+        }
+      });
+
+      // Requirement: Sembunyikan tombol "Load More" saat filter kategori lain aktif
+      if (loadMoreContainer) {
+        loadMoreContainer.style.display = 'none';
+      }
+    }
+  }
+
+  // Load More button click handler: reveal next 4 items
+  if (loadMoreBtn) {
+    loadMoreBtn.addEventListener('click', () => {
+      visibleAllCount += 4;
+      updatePortfolioDisplay();
     });
+  }
+
+  // Filter button click handlers
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      currentPortfolioFilter = filter;
+      if (currentPortfolioFilter === 'all') {
+        visibleAllCount = 4; // Reset to 4 items when returning to "Semua Proyek"
+      }
+      updatePortfolioDisplay();
+    });
+  });
+
+  // Initial call on page load
+  updatePortfolioDisplay();
   });
 
   // --- 5B. High-Performance On-Demand Video Preview Controller ---
@@ -1030,6 +1097,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_social: "Social Media",
       filter_motion: "Motion & Video",
       filter_print: "Flyer & Poster",
+      load_more_btn: "Lihat Lebih Banyak",
       pricing_badge: "Kolaborasi",
       pricing_title: "Collaboration Plans",
       pricing_subtitle: "Pilih model kerja sama yang paling sesuai dengan skala dan kebutuhan kreatif proyek Anda.",
@@ -1119,6 +1187,7 @@ document.addEventListener('DOMContentLoaded', () => {
       filter_social: "Social Media",
       filter_motion: "Motion & Video",
       filter_print: "Flyer & Poster",
+      load_more_btn: "Load More Projects",
       pricing_badge: "Collaboration",
       pricing_title: "Collaboration Plans",
       pricing_subtitle: "Choose the cooperation model best suited for your project scope and creative requirements.",
