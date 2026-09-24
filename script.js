@@ -291,6 +291,14 @@ document.addEventListener('DOMContentLoaded', () => {
         navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.15)';
       }
     });
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 992) {
+          navLinks.style.display = 'none';
+        }
+      });
+    });
   }
 
   // =========================================================

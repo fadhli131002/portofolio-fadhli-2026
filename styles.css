@@ -29,11 +29,17 @@ html {
   background-color: var(--bg-color);
   color: var(--text-primary);
   font-family: 'Google Sans Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+  max-width: 100%;
 }
 
 body {
   min-height: 100vh;
   overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100%;
+  width: 100%;
+  position: relative;
   background-color: #000;
   color: #fff;
   line-height: 1.5;
@@ -1940,60 +1946,209 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* 1. Header & Navbar (fits within 320-390px screens) */
+  .site-header {
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .nav-container {
+    padding: 0 1rem;
+    height: 4rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .logo-wrapper {
+    gap: 0.4rem;
+  }
+  .logo-name {
+    font-size: 1.12rem;
+    white-space: nowrap;
+  }
+  .logo-tag {
+    display: none;
+  }
+  .nav-actions {
+    gap: 0.45rem;
+  }
+  .nav-actions .social-icon-btn {
+    display: none; /* Hide desktop social icons on mobile header */
+  }
+  .lang-switch-btn {
+    padding: 0.28rem 0.55rem;
+    font-size: 0.74rem;
+  }
+  .btn-nav-cta {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.78rem;
+  }
+  .mobile-menu-btn {
+    padding: 0.4rem;
+  }
+
+  /* 2. Hero Section */
+  .hero-section {
+    padding: 5.5rem 1rem 3rem;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
   .hero-wall-container {
-    inset: -30px -40px;
+    inset: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    opacity: 0.55;
   }
   .hero-wall-track {
-    grid-template-columns: repeat(3, minmax(130px, 1fr));
-    gap: 0.75rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+    width: 100%;
   }
-  .hero-wall-col {
-    gap: 0.75rem;
-  }
-  .hero-tile {
-    border-radius: 14px;
-  }
+  .hero-wall-col.col-3,
   .hero-wall-col.col-4,
   .hero-wall-col.col-5 {
     display: none;
   }
+  .hero-content {
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    gap: 1.25rem;
+  }
+  .hero-badge {
+    font-size: 0.74rem;
+    padding: 0.35rem 0.85rem;
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+  }
+  .hero-name-title {
+    font-size: clamp(2rem, 9.5vw, 3.2rem);
+    word-break: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.1;
+    max-width: 100%;
+  }
   .hero-tagline {
-    font-size: 1.15rem;
-  }
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-  .ig-showcase-grid {
-    grid-template-columns: 1fr;
-  }
-  .ig-filter-bar {
-    flex-direction: column;
-    border-radius: var(--radius-md);
-    width: 100%;
-  }
-  .ig-tab-btn {
-    width: 100%;
-    justify-content: center;
-  }
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-  }
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-  .contact-grid {
-    grid-template-columns: 1fr;
+    font-size: 1rem;
+    line-height: 1.55;
+    padding: 0 0.5rem;
+    max-width: 100%;
   }
   .hero-buttons {
     flex-direction: column;
+    align-items: stretch;
     width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    gap: 0.75rem;
   }
-  .btn-primary, .btn-glass, .btn-wa {
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-wa {
     width: 100%;
+    justify-content: center;
+    text-align: center;
   }
-  .footer-top, .footer-bottom {
+  .hero-buttons .video-ctrl-btn {
+    margin: 0.25rem auto 0;
+  }
+
+  /* 3. General Sections & Grids */
+  .section {
+    padding: 4.5rem 1rem;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+  .section-header {
+    margin-bottom: 2.25rem;
+    padding: 0 0.5rem;
+    max-width: 100%;
+  }
+  .section-title {
+    font-size: clamp(1.8rem, 6.5vw, 2.6rem);
+    word-break: break-word;
+  }
+  .section-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.25rem;
+  }
+  .about-card {
+    padding: 1.75rem 1.25rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .lanyard-scene {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .services-grid,
+  .portfolio-grid,
+  .pricing-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 100%;
+  }
+  .portfolio-filter-bar {
+    gap: 0.4rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    justify-content: center;
+  }
+  .filter-btn {
+    padding: 0.42rem 0.95rem;
+    font-size: 0.8rem;
+  }
+  .footer-top,
+  .footer-bottom {
     flex-direction: column;
     align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+  }
+  .back-to-top-btn {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-container {
+    padding: 0 0.75rem;
+  }
+  .logo-name {
+    font-size: 1.05rem;
+  }
+  .btn-nav-cta {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+  .lang-switch-btn {
+    padding: 0.25rem 0.45rem;
+    font-size: 0.7rem;
+  }
+  .hero-section {
+    padding: 5rem 0.75rem 2.5rem;
+  }
+  .hero-name-title {
+    font-size: clamp(1.8rem, 10.5vw, 2.5rem);
+  }
+  .hero-buttons {
+    max-width: 285px;
   }
 }
 /* ===================================================
