@@ -1039,6 +1039,174 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // --- Portfolio Project Descriptions & Modals Bilingual Dictionary ---
+  const projectTranslations = {
+    "Redesign Meeting Room Orchid": {
+      id: "Perancangan visual 3D interior ruang rapat modern dengan pencahayaan arsitektural dan layout spasial fungsional.",
+      en: "Modern 3D interior visual design of corporate meeting rooms with architectural ambient lighting and functional spatial layout."
+    },
+    "Exhibition Booth 3D": {
+      id: "Desain panggung pameran dan booth interaktif bertema korporat dengan tata letak display produk maksimal.",
+      en: "Interactive 3D corporate exhibition booth and stage design featuring optimized product display circulation."
+    },
+    "Paguyuban Cisauk Stage Design": {
+      id: "Konsep 3D backdrop panggung acara kebudayaan dan panggung hiburan outdoor berskala besar.",
+      en: "Large-scale 3D stage backdrop concept for outdoor cultural events and community celebrations."
+    },
+    "TSM Land Serpong Brand Identity": {
+      id: "Pengembangan logo dan identitas merek visual untuk pengembang properti kawasan residensial Serpong.",
+      en: "Comprehensive logo design and visual brand identity for a premium Serpong residential developer."
+    },
+    "MAP Flash Brand Kit": {
+      id: "Identitas grafis internal platform pembelajaran dan komunikasi karyawan ritel grup MAP Tbk.",
+      en: "Internal visual brand kit and graphics for retail employee e-learning platform at MAP Group Tbk."
+    },
+    "Awtomotive YouTube Branding": {
+      id: "Desain logo, banner channel, dan motion bumper intro untuk media otomotif digital.",
+      en: "Logo identity, channel art banner, and animated bumper intro for digital automotive media."
+    },
+    "Property Showcase Feeds": {
+      id: "Rangkaian postingan Instagram feed bertema elegan untuk promosi hunian klaster modern.",
+      en: "Curated Instagram feed suite showcasing modern residential clusters with clean, elegant aesthetics."
+    },
+    "Citiasia Smart Society Series": {
+      id: "Animasi motion graphics 2D informatif untuk kampanye transformasi digital dan smart city.",
+      en: "Informative 2D motion graphics series for digital transformation and smart city initiative campaigns."
+    },
+    "Corporate Learning Animation": {
+      id: "Serial motion graphics interaktif untuk modul pelatihan karyawan multi-brand ritel.",
+      en: "Interactive motion graphics series tailored for multi-brand retail employee training modules."
+    },
+    "Residential Marketing Brochure": {
+      id: "Flyer dan brosur penjualan cetak format lipat tiga dengan spesifikasi denah & fasilitas lengkap.",
+      en: "Tri-fold print marketing brochures and sales flyers complete with floor plans & amenity specs."
+    },
+    "Swab.clinic Visual Identity": {
+      id: "Identitas merek layanan kesehatan modern, higienis, dan terpercaya dengan sistem logo minimalis.",
+      en: "Modern, hygienic visual brand identity system and logo design for healthcare services."
+    },
+    "Lapak Gemoy Campaign": {
+      id: "Materi promosi sosial media visual warna-warni yang menggugah selera untuk UMKM kuliner.",
+      en: "Vibrant, appetizing social media promotional campaign for culinary small-to-medium enterprise."
+    },
+    "Performante Ceramic Coating & Edu-Feeds": {
+      id: "Desain visual feeds & carousel edukatif kampanye nano ceramic coating, PPF, dan diferensiasi Clear Vision untuk luxury automotive.",
+      en: "Educational social feeds & carousels highlighting nano-ceramic coating, PPF, and Clear Vision technology for luxury automotive."
+    },
+    "Vansgard PPF Protection Campaign": {
+      id: "Visual kampanye komprehensif pelindung cat kendaraan (PPF) seri Matte & Supersafe dengan tipografi tegas dan estetika modern.",
+      en: "Comprehensive automotive paint protection film (PPF) campaign showcasing Matte & Supersafe series with sleek modern typography."
+    },
+    "Rantiz Detailing Social Feeds": {
+      id: "Materi feeds Instagram promosi salon mobil profesional dengan kombinasi tipografi tegas, penawaran musiman, dan edukasi cat kendaraan.",
+      en: "Instagram feed assets for professional auto detailing studio combining bold typography, seasonal promos, and paint care education."
+    },
+    "Deluxe Auto Care Promo Campaign": {
+      id: "Desain visual promosi berkala & paket detailing kendaraan beresolusi tinggi dengan tata letak minimalis dan copywriting terstruktur.",
+      en: "High-resolution promotional visuals & auto detailing packages crafted with minimalist layout and compelling copywriting."
+    },
+    "Blackstone Heat Rejection Series": {
+      id: "Konten edukasi media sosial mengenai keunggulan teknologi tolak panas kaca film premium untuk kenyamanan berkendara di iklim tropis.",
+      en: "Educational social series on premium solar window film heat-rejection technology for tropical driving comfort."
+    },
+    "Car Care & PPF Educational Carousel": {
+      id: "Format carousel multi-slide edukatif informatif: panduan perawatan PPF, tips kilap mobil tanpa salon, dan edukasi pencegahan baret cat.",
+      en: "Informative multi-slide carousel guides: PPF maintenance rules, DIY car gloss tips, and swirl-scratch prevention."
+    },
+    "Adem Sepanjang Jalan Series": {
+      id: "Serial kampanye visual media sosial dengan fokus kenyamanan kabin adem berkendara di bawah terik matahari menggunakan kaca film premium.",
+      en: "Social media visual campaign emphasizing serene, cool cabin temperatures under intense sun with premium tint."
+    },
+    "Architectural Solar Film Commercial Reel": {
+      id: "Video komersial arsitektural resolusi tinggi yang menampilkan aplikasi kaca film tolak panas premium pada fasad hunian mewah dan modern villa.",
+      en: "High-definition architectural film commercial highlighting premium heat-rejecting window films on luxury modern villa facades."
+    },
+    "Residential UV Protection Video Showcase": {
+      id: "Produksi video vertikal komersial (Reels) mengenai efisiensi penolakan radiasi UV dan kenyamanan suhu ruangan pada hunian residensial modern.",
+      en: "Vertical video production (Reels) demonstrating UV radiation rejection efficiency and indoor thermal comfort for modern residences."
+    },
+    "TSM Land Serpong Lifestyle & Promo Reel": {
+      id: "Konten video reels Instagram promosi properti dengan dynamic pacing, subtitle motion, dan penawaran New Year Deal hunian eksklusif Serpong.",
+      en: "Instagram real estate promo reel featuring dynamic pacing, animated kinetic subtitles, and Serpong New Year Deal offers."
+    },
+    "3D Spatial & Architecture Cinematic Walkthrough": {
+      id: "Animasi video rendering 3D sinematik menjelajahi rancangan ruang interior dan fasad arsitektur dengan pencahayaan fotorealistik dan material presisi.",
+      en: "Cinematic 3D architectural walkthrough animation exploring spatial interior layouts and facades with photorealistic lighting."
+    },
+    "Cluster Pinus Modern Townhouse Exterior 3D": {
+      id: "Visualisasi 3D eksterior fotorealistik perumahan 2 lantai Cluster Pinus dengan kanopi modern, pencahayaan alami Enscape, dan penataan lanskap hijau.",
+      en: "Photorealistic 3D exterior render of Cluster Pinus 2-story townhouses with modern canopies, natural Enscape lighting, and lush landscaping."
+    },
+    "Mediterranean Arch Commercial Shophouse 3D": {
+      id: "Visualisasi 3D ruko komersial 2 lantai dengan fasad lengkung arsitektur Mediterania, kisi kayu vertikal, dan area parkir terintegrasi.",
+      en: "3D architectural rendering of 2-story commercial shophouses featuring Mediterranean arches, vertical timber slats, and integrated parking."
+    },
+    "SOL Retail Store & Modern Apparel Display 3D": {
+      id: "Perancangan 3D interior toko pakaian modern industrial dengan struktur display kayu, lighting spotlight terarah, dan kasir ergonomis.",
+      en: "Modern industrial retail apparel store interior design featuring timber display shelving, directional spotlighting, and checkout counter."
+    },
+    "Gallardo Modern Canopy & Carport Architectural 3D": {
+      id: "Visualisasi 3D eksterior struktur kanopi carport modern dengan rangka baja presisi, pencahayaan indirect LED, kisi-kisi kayu, dan integrasi lanskap hunian mewah.",
+      en: "Architectural 3D render of modern luxury carport canopy featuring precision steel framing, indirect LED lighting, and landscape integration."
+    },
+    "Grand Villa Tropical Modern Exterior & Interior 3D": {
+      id: "Rangkaian 9 render visual Enscape 3D fotorealistik menyeluruh: eksplorasi fasad geometris modern tropis, roof terrace, dan tata ruang open-plan interior ruang keluarga.",
+      en: "Complete 9-slide photorealistic 3D visualization suite: modern tropical geometric villa facade, rooftop terrace, and open-plan living interior."
+    },
+    "Cinematic 3D Architectural Walkthrough Video": {
+      id: "Animasi walkthrough 3D sinematik dinamis memperlihatkan transisi pencahayaan natural waktu nyata, detail tekstur material arsitektur, dan pergerakan kamera halus menyusuri setiap sudut ruang.",
+      en: "Dynamic 3D cinematic architectural walkthrough showing real-time lighting transitions, material textures, and fluid camera sweeps."
+    },
+    "4-Story Contemporary Residence Comprehensive 3D Architecture": {
+      id: "Visualisasi 3D komprehensif 12 slide bangunan residensial modern 4 lantai: fasad depan ultra-modern, master bedroom elegan, courtyard taman dalam, tangga melayang, dan detail material pencahayaan fotorealistik.",
+      en: "12-slide comprehensive 3D architecture for a 4-story contemporary luxury residence: ultra-modern facade, master suite, internal courtyard, and floating stairs."
+    },
+    "H.O.G. Official Event Flag & Chapter Identity": {
+      id: "Perancangan visual bendera resmi Harley Owners Group (H.O.G.) Indomobil Jakarta Chapter Indonesia dengan motif racing checkered flag dan elang legendaris.",
+      en: "Official flag and emblem design for Harley Owners Group (H.O.G.) Indomobil Jakarta Chapter Indonesia featuring iconic eagle & racing checks."
+    },
+    "Pesta Rakyat Cisauk Girang Event Campaign": {
+      id: "Rangkaian poster dan flyer acara peringatan HUT RI ke-81: turnamen esports Mobile Legends & PES, lomba tari budaya, jalan santai, dan malam puncak seni.",
+      en: "Event branding posters and flyers for national celebration: esports tournaments, traditional dance, fun walk, and gala night."
+    },
+    "TSM Land Serpong Street Light Pole T-Banner": {
+      id: "Desain promosi vertikal outdoor tiang jalan boulevard utama untuk kampanye penjualan hunian residensial, promo cicilan, dan extra hadiah.",
+      en: "Outdoor boulevard streetlight vertical T-banner campaign promoting Serpong residential developments, financing deals, and rewards."
+    },
+    "Mandiri Steel Building Materials Edu-Carousel": {
+      id: "Serial carousel Instagram informatif mengenai tips pemilihan baja ringan, besi beton, dan spesifikasi material konstruksi untuk proyek bangunan.",
+      en: "Educational Instagram carousel series on light steel framing, rebar specifications, and construction material standards."
+    },
+    "Resort 60 H Ciputat Living Campaign": {
+      id: "Visual promosi hunian bertema resort modern tropis di pusat kota Ciputat dengan penawaran cicilan dan skema booking fee kompetitif.",
+      en: "Promotional campaign for tropical resort-style residential estate in central Ciputat featuring flexible booking fee schemes."
+    },
+    "Raysah Fashion E-Commerce Banner & Feeds": {
+      id: "Materi visual etalase digital Shopee dan kampanye promo musiman (Big Sale Ramadan, 11.11, 12.12) untuk brand busana muslimah elegan.",
+      en: "Digital storefront banners and seasonal campaign visuals (Ramadan Big Sale, 11.11, 12.12) for elegant modest fashion brand."
+    },
+    "TSM Land 'Kreasikan Rumah Impianmu' Series": {
+      id: "Rangkaian postingan carousel interaktif 6 slide mengenai fleksibilitas denah rumah 2 lantai, 3 kamar tidur, dan fitur smart home security.",
+      en: "6-slide interactive social carousel on 2-story home layout flexibility, 3-bedroom configurations, and smart security integrations."
+    },
+    "Villa Architectural Film Commercial": {
+      id: "Produksi video promosi sinematik kaca film arsitektural villa mewah dengan ritme dinamis, footage premium, dan visual storytelling yang tajam.",
+      en: "Cinematic architectural film commercial highlighting luxury modern villa glass tints with dynamic pacing, premium footage, and sharp visual storytelling."
+    },
+    "Pinus Modern Townhouse 3D Exterior": {
+      id: "Visualisasi arsitektur 3D fasad perumahan modern tropis dengan pencahayaan natural ambient Enscape, material bata ekspos, dan lanskap asri.",
+      en: "Photorealistic 3D architectural rendering of tropical modern townhouse facades with Enscape ambient lighting, exposed brickwork, and lush landscaping."
+    },
+    "Clear Vision & Coating Feeds": {
+      id: "Sistem aset promosi visual menyeluruh untuk Instagram studio otomotif mewah, menonjolkan fitur pelindung cat & diferensiasi Clear Vision.",
+      en: "Comprehensive visual promotion suite for luxury auto detailing Instagram, highlighting paint protection features and Clear Vision differentiation."
+    },
+    "Interactive Web UI": {
+      id: "Antarmuka website modern bertema dark mode dengan perpaduan glassmorphism, micro-interactions responsif, dan struktur navigasi intuitif.",
+      en: "Modern dark-mode website interface crafted with refined glassmorphism, responsive micro-interactions, and intuitive navigation structure."
+    }
+  };
+
   const langSwitchBtn = document.getElementById('lang-switch-btn');
   const langOptId = document.getElementById('lang-opt-id');
   const langOptEn = document.getElementById('lang-opt-en');
@@ -1061,7 +1229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Update all elements with data-i18n
+    // 1. Update all elements with data-i18n
     const transObj = translations[lang] || translations.id;
     document.querySelectorAll('[data-i18n]').forEach(el => {
       const key = el.getAttribute('data-i18n');
@@ -1069,6 +1237,81 @@ document.addEventListener('DOMContentLoaded', () => {
         el.innerHTML = transObj[key];
       }
     });
+
+    // 2. Update all Portfolio Grid Cards
+    document.querySelectorAll('.project-card').forEach(card => {
+      const titleEl = card.querySelector('.project-title');
+      const descEl = card.querySelector('.project-desc');
+      const hoverBtn = card.querySelector('.project-hover-btn');
+      const badgeEl = card.querySelector('.project-category-badge');
+
+      if (titleEl && descEl) {
+        const titleText = titleEl.textContent.replace(/&amp;/g, '&').trim();
+        const pTrans = projectTranslations[titleText];
+        if (pTrans && pTrans[lang]) {
+          descEl.textContent = pTrans[lang];
+          card.setAttribute('data-desc', pTrans[lang]);
+        }
+      }
+
+      // Update hover button text
+      if (hoverBtn) {
+        if (hoverBtn.textContent.includes('Video') || hoverBtn.textContent.includes('Putar') || hoverBtn.textContent.includes('Play')) {
+          if (hoverBtn.textContent.includes('3D')) {
+            hoverBtn.innerHTML = lang === 'en' 
+              ? '<i class="material-icons">play_arrow</i> Play 3D Video' 
+              : '<i class="material-icons">play_arrow</i> Putar Video 3D';
+          } else {
+            hoverBtn.innerHTML = lang === 'en' 
+              ? '<i class="material-icons">play_arrow</i> Play Video' 
+              : '<i class="material-icons">play_arrow</i> Putar Video';
+          }
+        } else {
+          hoverBtn.innerHTML = lang === 'en' 
+            ? '<i class="material-icons">visibility</i> View Work' 
+            : '<i class="material-icons">visibility</i> Lihat Karya';
+        }
+      }
+
+      // Category badge translation
+      if (badgeEl) {
+        const cat = card.getAttribute('data-category');
+        if (lang === 'en') {
+          if (cat === '3d') badgeEl.textContent = '3D Design';
+          else if (cat === 'motion') badgeEl.textContent = 'Motion & Video';
+          else if (cat === 'logo') badgeEl.textContent = 'Branding';
+          else if (cat === 'social') badgeEl.textContent = 'Social Media';
+          else if (cat === 'print') badgeEl.textContent = 'Print Media';
+        } else {
+          if (cat === '3d') badgeEl.textContent = '3D Design';
+          else if (cat === 'motion') badgeEl.textContent = 'Motion Graphic';
+          else if (cat === 'logo') badgeEl.textContent = 'Branding';
+          else if (cat === 'social') badgeEl.textContent = 'Social Media';
+          else if (cat === 'print') badgeEl.textContent = 'Print Media';
+        }
+      }
+    });
+
+    // 3. Update Gallery Cards in #projects-modal
+    document.querySelectorAll('.gallery-card').forEach(card => {
+      const titleEl = card.querySelector('.gallery-card-title');
+      const descEl = card.querySelector('.gallery-card-desc');
+      if (titleEl && descEl) {
+        const titleText = titleEl.textContent.replace(/&amp;/g, '&').trim();
+        const pTrans = projectTranslations[titleText];
+        if (pTrans && pTrans[lang]) {
+          descEl.textContent = pTrans[lang];
+        }
+      }
+    });
+
+    // 4. Update Lightbox info if currently open
+    if (lightboxModal && lightboxModal.classList.contains('active')) {
+      const currentTitle = lightboxTitle ? lightboxTitle.textContent.replace(/&amp;/g, '&').trim() : '';
+      if (projectTranslations[currentTitle] && projectTranslations[currentTitle][lang]) {
+        if (lightboxDesc) lightboxDesc.textContent = projectTranslations[currentTitle][lang];
+      }
+    }
 
     document.documentElement.lang = lang;
   }
