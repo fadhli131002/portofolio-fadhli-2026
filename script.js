@@ -205,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Initial call on page load
   updatePortfolioDisplay();
-  });
 
   // --- 5B. High-Performance On-Demand Video Preview Controller ---
   // Completely eliminates lag: plays video only on user hover (Desktop) or center viewport (Mobile)
