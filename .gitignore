@@ -1,0 +1,23 @@
+# Logs and scratch scripts
+*.log
+scratch/
+test_*.js
+check_*.js
+calc_*.js
+download_instagram_feeds.js
+ig_gallardo.html
+serve.js
+*.ps1
+screenshot*.png
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Exclude unused raw duplicate videos
+assets/instagram/Portofolio/3d/Fial.mp4
+assets/instagram/Portofolio/3d/Vidio/main vidio.mp4
+assets/instagram/Portofolio/TSM land/reels/AQ*.mp4
+assets/instagram/Portofolio/TSM land/reels/MODAL*.mp4
+assets/instagram/Portofolio/TSM land/reels/Jangan*.mp4
+assets/instagram/Portofolio/TSM land/reels/Buat*.mp4

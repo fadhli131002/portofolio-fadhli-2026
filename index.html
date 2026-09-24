@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#000000">
+  <title>Muhammad Fadhli - Creative Worker & Visual Designer</title>
+  <meta name="description" content="Portofolio Muhammad Fadhli, Creative Worker dari Tangerang, Indonesia. Spesialis Graphic Design, Video Editing, Motion Graphics, 3D Design, dan Web Design.">
+  <link rel="shortcut icon" href="assets/fotocv2.png" type="image/png">
+
+  <!-- Google Fonts & Material Symbols -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+<body>
+
+  <!-- Sticky Glassmorphic Header -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="#" class="logo-wrapper">
+        <span class="logo-name">Fadhli</span>
+        <span class="logo-tag">Creative</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Layanan</a>
+        <a href="#portfolio" data-i18n="nav_portfolio">Portofolio</a>
+        <a href="#experience" data-i18n="nav_experience">Pengalaman</a>
+        <a href="#testimonials" data-i18n="nav_testimonials">Testimoni</a>
+        <a href="#contact" data-i18n="nav_contact">Kontak</a>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Language Switcher Toggle Pill -->
+        <button class="lang-switch-btn" id="lang-switch-btn" aria-label="Ganti Bahasa (ID / EN)" title="Ganti Bahasa / Switch Language">
+          <span class="lang-opt active" id="lang-opt-id" data-lang="id">ID</span>
+          <span class="lang-divider">/</span>
+          <span class="lang-opt" id="lang-opt-en" data-lang="en">EN</span>
+        </button>
+
+        <a href="https://www.linkedin.com/in/muhammad-fadhli-582795201/" target="_blank" class="social-icon-btn" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/mha_fadhli/" target="_blank" class="social-icon-btn" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+        <a href="https://wa.me/628881124215" target="_blank" class="btn-nav-cta">
+          <span>WhatsApp</span>
+        </a>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Open Menu">
+          <i class="material-icons">menu</i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section with Ambient Multi-Tile Portfolio Wall (Google Flow Style) -->
+  <section class="hero-section" id="hero">
+    <!-- Hero Portfolio Wall: Multi-Tile Grid of Videos & 3D Artwork -->
+    <div class="hero-wall-container" id="hero-wall">
+      <div class="hero-wall-track">
+        <!-- Column 1 -->
+        <div class="hero-wall-col col-1">
+          <div class="hero-tile tile-video">
+            <video class="hero-tile-media" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/instagram/Portofolio/3d/Vidio/3d_spatial_walkthrough.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/Pinus.png" alt="Cluster Pinus 3D Exterior" class="hero-tile-media" loading="lazy">
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Bagian Depan.png" alt="Luxury Residence Fasad 3D" class="hero-tile-media" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="hero-wall-col col-2">
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Gallardo canopy 1.jpg" alt="Gallardo Canopy 3D" class="hero-tile-media" loading="lazy">
+          </div>
+          <div class="hero-tile tile-video">
+            <video class="hero-tile-media" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/instagram/Portofolio/3d/3d_final_walkthrough.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Masterbe.png" alt="Master Suite 3D" class="hero-tile-media" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Column 3 (Center) -->
+        <div class="hero-wall-col col-3">
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Depan atas.png" alt="Grand Villa 3D" class="hero-tile-media" loading="lazy">
+          </div>
+          <div class="hero-tile tile-video">
+            <video class="hero-tile-media" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/instagram/Portofolio/vidio/sma_villa_commercial.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/Ruko.png" alt="Commercial Shophouse 3D" class="hero-tile-media" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="hero-wall-col col-4">
+          <div class="hero-tile tile-video">
+            <video class="hero-tile-media" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/instagram/Portofolio/vidio/sma_residence_reel.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/1.png" alt="SOL Apparel Store 3D" class="hero-tile-media" loading="lazy">
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Gallardo canopy 2.jpg" alt="Gallardo Canopy Detail" class="hero-tile-media" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Column 5 -->
+        <div class="hero-wall-col col-5">
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Balkon.png" alt="Balkon Rooftop 3D" class="hero-tile-media" loading="lazy">
+          </div>
+          <div class="hero-tile tile-video">
+            <video class="hero-tile-media" autoplay muted loop playsinline preload="metadata">
+              <source src="assets/instagram/Portofolio/TSM land/reels/tsm_newyear_deal.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="hero-tile tile-img">
+            <img src="assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_dalam 2.png" alt="Villa Interior 3D" class="hero-tile-media" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vignette / Radial Overlay Gradient -->
+    <div class="hero-overlay-gradient"></div>
+
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="hero-badge-dot"></span>
+        <span data-i18n="hero_badge">CREATIVE WORKER • TANGERANG, INDONESIA</span>
+      </div>
+
+      <h1 class="hero-name-title">MUHAMMAD FADHLI</h1>
+      
+      <p class="hero-tagline" data-i18n="hero_tagline">
+        Saya senang mengubah masalah-masalah kompleks menjadi desain yang sederhana, indah, dan intuitif. Berpengalaman 5+ tahun mengerjakan proyek kreatif untuk brand &amp; perusahaan ternama.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#portfolio" class="btn-primary" style="padding: 0.85rem 1.6rem; border-radius: 99px; color: #000; background: #fff; text-decoration: none; display: flex; align-items: center; gap: 0.5rem; font-weight: 500;">
+          <span data-i18n="hero_btn_portfolio">Lihat Portofolio</span>
+          <i class="material-icons" style="font-size: 1.2rem;">arrow_downward</i>
+        </a>
+        <a href="https://wa.me/628881124215" target="_blank" class="btn-wa">
+          <span data-i18n="hero_btn_wa">Hubungi via WhatsApp</span>
+        </a>
+        <button class="video-ctrl-btn" id="hero-video-toggle" aria-label="Toggle Background Videos" title="Pause / Play Videos">
+          <i class="material-icons" id="hero-toggle-icon">pause</i>
+        </button>
+      </div>
+    </div>
+
+    <div class="scroll-indicator" id="scroll-indicator">
+      <i class="material-icons" style="font-size: 2rem;">keyboard_arrow_down</i>
+    </div>
+  </section>
+
+  <!-- About / Overview Section -->
+  <section class="section" id="about">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="about_badge">Profil Kreatif</span>
+      <h2 class="section-title" data-i18n="about_title">Tentang Saya</h2>
+      <p class="section-subtitle" data-i18n="about_subtitle">
+        Desainer ahli yang siap menyelesaikan berbagai kebutuhan kreatif Anda dengan standar profesional tertinggi.
+      </p>
+    </div>
+
+    <div class="about-card reveal-on-scroll">
+            <!-- 3D Interactive Lanyard ID Card Scene -->
+      <div class="lanyard-scene" id="lanyard-scene">
+        <!-- Fabric Lanyard Strap -->
+        <div class="lanyard-strap"></div>
+        <!-- Metallic Clasp Hook -->
+        <div class="lanyard-clasp">
+          <div class="clasp-metal"></div>
+          <div class="clasp-ring"></div>
+        </div>
+
+        <!-- 3D Card Holder with Physics Swing -->
+        <div class="id-card-wrapper" id="id-card-wrapper">
+          <div class="id-card-3d" id="id-card-3d">
+            
+            <!-- Front Face: ID Badge with Photo -->
+            <div class="card-face card-front" id="card-front-face">
+              <div class="card-holo-sheen"></div>
+              <div class="card-punch-hole"></div>
+
+              <div class="id-header">
+                <div class="id-logo-row">
+                  <span class="id-brand">FADHLI</span>
+                  <span class="id-pass-type">ALL ACCESS</span>
+                </div>
+                <span class="id-edition">CREATIVE PASS 2026</span>
+              </div>
+
+              <div class="id-photo-frame">
+                <img src="assets/fotocv2.png" alt="Muhammad Fadhli" class="id-photo-img" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/fotocv2.png'">
+                <div class="id-photo-tag">MF-0408</div>
+              </div>
+
+              <div class="id-meta">
+                <h3 class="id-name">MUHAMMAD FADHLI</h3>
+                <p class="id-role">Visual Designer & 3D Artist</p>
+                <div class="id-badges-row">
+                  <div class="id-spec-item">
+                    <span class="spec-label">DEPT</span>
+                    <span class="spec-value">CREATIVE</span>
+                  </div>
+                  <div class="id-spec-item">
+                    <span class="spec-label">BASE</span>
+                    <span class="spec-value">TANGERANG</span>
+                  </div>
+                  <div class="id-spec-item">
+                    <span class="spec-label">STATUS</span>
+                    <span class="spec-value active">VERIFIED</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="id-footer">
+                <div class="id-chip">
+                  <div class="chip-line"></div>
+                </div>
+                <div class="id-barcode-graphic">
+                  <div class="barcode-lines"></div>
+                  <span class="barcode-number">0408 2003 2026</span>
+                </div>
+              </div>
+
+              <div class="flip-hint">
+                <i class="material-icons">sync</i>
+                <span data-i18n="card_flip_hint_1">Klik kartu untuk membalik</span>
+              </div>
+            </div>
+
+            <!-- Back Face: Magnetic Stripe & QR Contacts -->
+            <div class="card-face card-back" id="card-back-face">
+              <div class="card-holo-sheen"></div>
+              <div class="card-punch-hole"></div>
+              <div class="mag-stripe"></div>
+
+              <div class="back-content">
+                <div class="security-seal">
+                  <div class="seal-inner">
+                    <i class="material-icons">verified</i>
+                    <span>OFFICIAL CREATIVE PASS</span>
+                  </div>
+                </div>
+
+                <div class="qr-contact-box">
+                  <svg class="id-qr-code" viewBox="0 0 100 100" fill="currentColor">
+                    <path d="M0 0h35v35H0zM5 5h25v25H5zM10 10h15v15H10zM65 0h35v35H65zM70 5h25v25H70zM75 10h15v15H75zM0 65h35v35H0zM5 70h25v25H5zM10 75h15v15H10zM45 10h10v10H45zM45 35h10v20H45zM65 45h20v10H65zM10 45h20v10H10zM55 65h10v25H55zM75 65h25v10H75zM75 85h15v15H75zM40 75h10v15H40zM85 45h15v15H85z"/>
+                  </svg>
+                  <div class="qr-info">
+                    <span class="qr-title">SCAN TO CONNECT</span>
+                    <span class="qr-sub">mha.fadhli@gmail.com</span>
+                    <span class="qr-phone">(+62) 888 1124 215</span>
+                  </div>
+                </div>
+
+                <div class="id-signature-box">
+                  <span class="sig-label">AUTHORIZED SIGNATURE</span>
+                  <div class="sig-line">
+                    <span class="sig-cursive">Muhammad Fadhli</span>
+                  </div>
+                </div>
+
+                <p class="id-terms" data-i18n="card_terms">
+                  Lencana verifikasi resmi portofolio Muhammad Fadhli untuk layanan Graphic Design, Video Editing, Motion & 3D Spatial.
+                </p>
+              </div>
+
+              <div class="flip-hint">
+                <i class="material-icons">sync</i>
+                <span data-i18n="card_flip_hint_2">Klik untuk kembali</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="about-info-col">
+        <h3 class="about-quote" data-i18n="about_quote">
+          "Orang mencari desainer ahli untuk menyelesaikan pekerjaan mereka, dan saya hadir untuk memberikan solusi visual terbaik."
+        </h3>
+        <p class="about-body" data-i18n="about_body">
+          Saya adalah pekerja kreatif berbasis di Cisauk, Tangerang, Indonesia. Dengan pengalaman lebih dari 5 tahun, saya telah merancang kartu bisnis berkualitas tinggi, identitas logo, visual media sosial, motion graphics, video komersial, hingga 3D booth & stage design untuk berbagai korporasi besar seperti <strong>PT. MAP Tbk</strong>, <strong>Citiasia.inc</strong>, <strong>PT. Tribrata Surya Mandiri Land</strong>, dan <strong>PT. Merpati Mahardika</strong>.
+        </p>
+
+        <div class="metrics-grid">
+          <div class="metric-item">
+            <span class="metric-val">5+</span>
+            <span class="metric-lbl" data-i18n="metric_exp">Tahun Pengalaman</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">50+</span>
+            <span class="metric-lbl" data-i18n="metric_projects">Proyek Selesai</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">10+</span>
+            <span class="metric-lbl" data-i18n="metric_clients">Klien Korporat</span>
+          </div>
+          <div class="metric-item">
+            <span class="metric-val">100%</span>
+            <span class="metric-lbl" data-i18n="metric_quality">Dedikasi Kualitas</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Software Mastery Section (Integrated Monochrome Panel) -->
+    <div class="hud-software-panel software-mastery-panel reveal-on-scroll" id="software-mastery-hud">
+      <div class="hud-header">
+        <div class="hud-title-wrap">
+          <span class="hud-status-indicator"></span>
+          <h3 class="hud-title">SOFTWARE MASTERY</h3>
+          <span class="hud-header-badge" data-i18n="hud_badge">Tingkat Kemahiran Alat & Perangkat Kreatif</span>
+        </div>
+      </div>
+
+      <div class="hud-skill-list" id="hud-skill-list">
+        <!-- 1. Photoshop (95%) -->
+        <div class="hud-skill-item" data-target="95">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">Photoshop</span>
+            <span class="hud-skill-val" data-target="95">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-photoshop" data-target="95" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 2. Illustrator (96%) -->
+        <div class="hud-skill-item" data-target="96">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">Illustrator</span>
+            <span class="hud-skill-val" data-target="96">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-illustrator" data-target="96" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 3. Premier (85%) -->
+        <div class="hud-skill-item" data-target="85">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">Premier</span>
+            <span class="hud-skill-val" data-target="85">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-premiere" data-target="85" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 4. After Effect (80%) -->
+        <div class="hud-skill-item" data-target="80">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">After Effect</span>
+            <span class="hud-skill-val" data-target="80">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-aftereffects" data-target="80" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 5. SketchUp (85%) -->
+        <div class="hud-skill-item" data-target="85">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">SketchUp</span>
+            <span class="hud-skill-val" data-target="85">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-sketchup" data-target="85" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 6. Ms Office (80%) -->
+        <div class="hud-skill-item" data-target="80">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">Ms Office</span>
+            <span class="hud-skill-val" data-target="80">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-msoffice" data-target="80" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- 7. Cameraman (87%) -->
+        <div class="hud-skill-item skill-fullwidth" data-target="87">
+          <div class="hud-skill-meta">
+            <span class="hud-skill-name">Cameraman</span>
+            <span class="hud-skill-val" data-target="87">0%</span>
+          </div>
+          <div class="hud-bar-track">
+            <div class="hud-bar-fill fill-cameraman" data-target="87" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Running Logo Marquee (Infinite Loop with Creative Tools Logos) -->
+      <div class="software-marquee-container" aria-label="Software & Tools Stack">
+        <div class="software-marquee-track">
+          <div class="software-marquee-group">
+            <img src="assets/instagram/logo/Artboard 3 copy 3.png" alt="Adobe Photoshop" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3.png" alt="Adobe Illustrator" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 2.png" alt="Adobe Premiere Pro" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 4.png" alt="Adobe After Effects" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 15.png" alt="Figma" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 14.png" alt="Enscape" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 5.png" alt="Adobe InDesign" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 6.png" alt="Adobe Lightroom" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 8.png" alt="Adobe Creative Cloud" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 7.png" alt="Adobe Acrobat" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 10.png" alt="Microsoft Word" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 9.png" alt="Microsoft Excel" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 13.png" alt="Microsoft PowerPoint" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 11.png" alt="Microsoft Access" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 12.png" alt="Microsoft Publisher" class="marquee-logo" loading="lazy">
+          </div>
+          <div class="software-marquee-group" aria-hidden="true">
+            <img src="assets/instagram/logo/Artboard 3 copy 3.png" alt="Adobe Photoshop" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3.png" alt="Adobe Illustrator" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 2.png" alt="Adobe Premiere Pro" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 4.png" alt="Adobe After Effects" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 15.png" alt="Figma" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 14.png" alt="Enscape" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 5.png" alt="Adobe InDesign" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 6.png" alt="Adobe Lightroom" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 8.png" alt="Adobe Creative Cloud" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 7.png" alt="Adobe Acrobat" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 10.png" alt="Microsoft Word" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 9.png" alt="Microsoft Excel" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 13.png" alt="Microsoft PowerPoint" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 11.png" alt="Microsoft Access" class="marquee-logo" loading="lazy">
+            <img src="assets/instagram/logo/Artboard 3 copy 12.png" alt="Microsoft Publisher" class="marquee-logo" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Client Logos Ribbon -->
+    <div class="clients-ribbon reveal-on-scroll stagger-2">
+      <img src="https://fadhli131002.github.io/portofolio2025/assets/images/logotsmland.png" alt="TSM Land" class="client-logo-item">
+      <img src="https://fadhli131002.github.io/portofolio2025/assets/images/Logosamaraland.png" alt="Samaraland" class="client-logo-item">
+      <img src="https://fadhli131002.github.io/portofolio2025/assets/images/wizpro.png" alt="Wizpro" class="client-logo-item">
+      <img src="https://fadhli131002.github.io/portofolio2025/assets/images/hagane.png" alt="Hagane" class="client-logo-item">
+      <img src="https://fadhli131002.github.io/portofolio2025/assets/images/LogoHDI.png" alt="HDI" class="client-logo-item">
+    </div>
+  </section>
+  <!-- Core Disciplines / Services Section -->
+  <section class="section" id="services">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="services_badge">Layanan Utama</span>
+      <h2 class="section-title" data-i18n="services_title">Layanan Keahlian</h2>
+      <p class="section-subtitle" data-i18n="services_subtitle">
+        Menghadirkan solusi kreatif holistik dari desain identitas, video komersial, motion dinamis, hingga pemodelan 3D spasial.
+      </p>
+    </div>
+    
+    <div class="services-hint reveal-on-scroll">
+      <i class="material-icons">touch_app</i>
+      <span data-i18n="services_hint">Klik salah satu kartu untuk mode fokus visual (seperti Google Flow)</span>
+    </div>
+
+    <div class="services-grid" id="services-grid">
+      <!-- Service 1: Graphic Design -->
+      <div class="service-card reveal-on-scroll stagger-1" tabindex="0" role="button" aria-pressed="false">
+        <div class="service-card-top">
+          <div class="service-icon-box">
+            <i class="material-icons">palette</i>
+          </div>
+          <div class="service-focus-badge">
+            <span class="focus-pulse"></span>
+            <span data-i18n="services_focus">Fokus</span>
+          </div>
+        </div>
+        <h3 class="service-title">Graphic Design</h3>
+        <p class="service-desc" data-i18n="service_1_desc">
+          Membuat desain modern dan berkualitas tinggi dengan standar estetika profesional: logo, kartu bisnis, poster, flyer, dan identitas brand.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag">Branding</span>
+          <span class="service-tag">Logo Design</span>
+          <span class="service-tag">Marketing Kits</span>
+          <span class="service-tag">Print Media</span>
+        </div>
+      </div>
+
+      <!-- Service 2: Video Editing -->
+      <div class="service-card reveal-on-scroll stagger-2" tabindex="0" role="button" aria-pressed="false">
+        <div class="service-card-top">
+          <div class="service-icon-box">
+            <i class="material-icons">movie</i>
+          </div>
+          <div class="service-focus-badge">
+            <span class="focus-pulse"></span>
+            <span data-i18n="services_focus">Fokus</span>
+          </div>
+        </div>
+        <h3 class="service-title">Video Editing</h3>
+        <p class="service-desc" data-i18n="service_2_desc">
+          Menghasilkan konten video berkualitas tinggi dengan pacing dinamis, color grading sinematik, dan audio mixing untuk YouTube & korporasi.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag">YouTube Content</span>
+          <span class="service-tag">Reels / Shorts</span>
+          <span class="service-tag">Corporate Video</span>
+          <span class="service-tag">Color Grading</span>
+        </div>
+      </div>
+
+      <!-- Service 3: Motion & 3D -->
+      <div class="service-card reveal-on-scroll stagger-3" tabindex="0" role="button" aria-pressed="false">
+        <div class="service-card-top">
+          <div class="service-icon-box">
+            <i class="material-icons">view_in_ar</i>
+          </div>
+          <div class="service-focus-badge">
+            <span class="focus-pulse"></span>
+            <span data-i18n="services_focus">Fokus</span>
+          </div>
+        </div>
+        <h3 class="service-title">Motion & 3D Design</h3>
+        <p class="service-desc" data-i18n="service_3_desc">
+          Mendesain animasi motion graphics yang atraktif serta pemodelan 3D interior, panggung (*stage*), dan *booth exhibition* fotorealistik.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag">Motion Graphics</span>
+          <span class="service-tag">3D Stage Design</span>
+          <span class="service-tag">Booth Exhibition</span>
+          <span class="service-tag">Interior Visual</span>
+        </div>
+      </div>
+
+      <!-- Service 4: Web Design -->
+      <div class="service-card reveal-on-scroll stagger-4" tabindex="0" role="button" aria-pressed="false">
+        <div class="service-card-top">
+          <div class="service-icon-box">
+            <i class="material-icons">web</i>
+          </div>
+          <div class="service-focus-badge">
+            <span class="focus-pulse"></span>
+            <span data-i18n="services_focus">Fokus</span>
+          </div>
+        </div>
+        <h3 class="service-title">Web Design</h3>
+        <p class="service-desc" data-i18n="service_4_desc">
+          Membuat desain website modern, simpel, dan elegan yang berpusat pada kenyamanan pengguna (*user-friendly*) dan konversi visual.
+        </p>
+        <div class="service-tags">
+          <span class="service-tag">UI/UX</span>
+          <span class="service-tag">Landing Page</span>
+          <span class="service-tag">Responsive</span>
+          <span class="service-tag">Figma / Web</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Showcase Section -->
+  <section class="section" id="portfolio">
+
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="portfolio_badge">Koleksi Karya</span>
+      <h2 class="section-title" data-i18n="portfolio_title">Portofolio Terpilih</h2>
+      <p class="section-subtitle" data-i18n="portfolio_subtitle">
+        Proyek-proyek kurasi mencakup desain 3D, identitas brand, visual media sosial, motion graphics, dan materi promosi korporat.
+      </p>
+    </div>
+
+    <!-- Category Filters -->
+    <div class="portfolio-filter-bar reveal-on-scroll stagger-1">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">Semua Proyek</button>
+      <button class="filter-btn" data-filter="3d" data-i18n="filter_3d">3D & Spatial</button>
+      <button class="filter-btn" data-filter="logo" data-i18n="filter_logo">Branding & Logo</button>
+      <button class="filter-btn" data-filter="social" data-i18n="filter_social">Social Media</button>
+      <button class="filter-btn" data-filter="motion" data-i18n="filter_motion">Motion & Video</button>
+      <button class="filter-btn" data-filter="print" data-i18n="filter_print">Flyer & Poster</button>
+    </div>
+
+    <div class="portfolio-grid">
+      <!-- Project 1: 3D Meeting Room -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="3d">
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <img src="assets/projects/project1.jpg" alt="Meeting Room" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/fullpreview/MR-Orchid.jpg'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Redesign Meeting Room Orchid</h3>
+          <span class="project-client">PT. Merpati Mahardika</span>
+          <p class="project-desc">Perancangan visual 3D interior ruang rapat modern dengan pencahayaan arsitektural dan layout spasial fungsional.</p>
+        </div>
+      </div>
+
+      <!-- Project 2: 3D Booth -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="3d">
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <img src="assets/projects/project2.jpg" alt="3D Booth" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/fullpreview/3DBooth_mm.jpg'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Exhibition Booth 3D</h3>
+          <span class="project-client">PT. Merpati Mahardika</span>
+          <p class="project-desc">Desain panggung pameran dan booth interaktif bertema korporat dengan tata letak display produk maksimal.</p>
+        </div>
+      </div>
+
+      <!-- Project 3: 3D Stage -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="3d">
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <img src="assets/projects/project3.jpg" alt="Stage Design" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/fullpreview/3d_stage.jpg'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Paguyuban Cisauk Stage Design</h3>
+          <span class="project-client">Paguyuban Cisauk</span>
+          <p class="project-desc">Konsep 3D backdrop panggung acara kebudayaan dan panggung hiburan outdoor berskala besar.</p>
+        </div>
+      </div>
+
+      <!-- Project 4: Logo TSM Land -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="logo">
+        <div class="project-media-box">
+          <span class="project-category-badge">Branding</span>
+          <img src="assets/projects/project4.png" alt="TSM Land Logo" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/tsm.png'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">TSM Land Serpong Brand Identity</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Pengembangan logo dan identitas merek visual untuk pengembang properti kawasan residensial Serpong.</p>
+        </div>
+      </div>
+
+      <!-- Project 5: MAP Flash -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="logo">
+        <div class="project-media-box">
+          <span class="project-category-badge">Branding</span>
+          <img src="assets/projects/project5.png" alt="MAP Flash" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/flash-1.png'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">MAP Flash Brand Kit</h3>
+          <span class="project-client">PT. Mitra Adiperkasa (MAP) Tbk.</span>
+          <p class="project-desc">Identitas grafis internal platform pembelajaran dan komunikasi karyawan ritel grup MAP Tbk.</p>
+        </div>
+      </div>
+
+      <!-- Project 6: Awtomotive Channel -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="logo">
+        <div class="project-media-box">
+          <span class="project-category-badge">Branding</span>
+          <img src="assets/projects/project6.png" alt="Awtomotive" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/aw-1.png'">
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Awtomotive YouTube Branding</h3>
+          <span class="project-client">Adil Wiguna's YouTube Channel</span>
+          <p class="project-desc">Desain logo, banner channel, dan motion bumper intro untuk media otomotif digital.</p>
+        </div>
+      </div>
+
+      <!-- Project 7: Social Media TSM Land -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="social" data-title="Property Showcase Feeds" data-client="PT. Tribrata Surya Mandiri Land" data-desc="Rangkaian postingan Instagram feed bertema elegan untuk promosi hunian klaster modern." data-slides='["assets/projects/project7.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <img src="assets/projects/project7.png" alt="Social Media TSM" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/sosial%20media1.png'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Property Showcase Feeds</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Rangkaian postingan Instagram feed bertema elegan untuk promosi hunian klaster modern.</p>
+        </div>
+      </div>
+
+      <!-- Project 8: Citiasia Motion Graphic -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="motion" data-title="Citiasia Smart Society Series" data-client="Citiasia.inc" data-desc="Animasi motion graphics 2D informatif untuk kampanye transformasi digital dan smart city." data-slides='["assets/projects/project8.gif"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Motion Graphic</span>
+          <img src="assets/projects/project8.gif" alt="Citiasia Motion" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Motion/citiasia/Lucy-Hmm.gif'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Citiasia Smart Society Series</h3>
+          <span class="project-client">Citiasia.inc</span>
+          <p class="project-desc">Animasi motion graphics 2D informatif untuk kampanye transformasi digital dan smart city.</p>
+        </div>
+      </div>
+
+      <!-- Project 9: MAP Tbk Motion Series -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="motion" data-title="Corporate Learning Animation" data-client="PT. MAP Tbk." data-desc="Serial motion graphics interaktif untuk modul pelatihan karyawan multi-brand ritel." data-slides='["assets/projects/project9.gif"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Motion Graphic</span>
+          <img src="assets/projects/project9.gif" alt="MAP Motion" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Motion/MAP/ThatsCool-girl_1_3.gif'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Corporate Learning Animation</h3>
+          <span class="project-client">PT. MAP Tbk.</span>
+          <p class="project-desc">Serial motion graphics interaktif untuk modul pelatihan karyawan multi-brand ritel.</p>
+        </div>
+      </div>
+
+      <!-- Project 10: Marketing Flyer TSM -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="print" data-title="Residential Marketing Brochure" data-client="PT. Tribrata Surya Mandiri Land" data-desc="Flyer dan brosur penjualan cetak format lipat tiga dengan spesifikasi denah & fasilitas lengkap." data-slides='["assets/projects/project10.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Print Media</span>
+          <img src="assets/projects/project10.png" alt="Flyer TSM Land" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Poster/Flayerdepan2024.png'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Residential Marketing Brochure</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Flyer dan brosur penjualan cetak format lipat tiga dengan spesifikasi denah & fasilitas lengkap.</p>
+        </div>
+      </div>
+
+      <!-- Project 11: Swab Clinic -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="logo" data-title="Swab.clinic Visual Identity" data-client="PT. WSG" data-desc="Identitas merek layanan kesehatan modern, higienis, dan terpercaya dengan sistem logo minimalis." data-slides='["assets/projects/project11.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Branding</span>
+          <img src="assets/projects/project11.png" alt="Swab Clinic" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/swab.clinic.png'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Swab.clinic Visual Identity</h3>
+          <span class="project-client">PT. WSG</span>
+          <p class="project-desc">Identitas merek layanan kesehatan modern, higienis, dan terpercaya dengan sistem logo minimalis.</p>
+        </div>
+      </div>
+
+      <!-- Project 12: Lapak Gemoy Social Media -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="social" data-title="Lapak Gemoy Campaign" data-client="Lapak Gemoy" data-desc="Materi promosi sosial media visual warna-warni yang menggugah selera untuk UMKM kuliner." data-slides='["assets/projects/project12.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <img src="assets/projects/project12.png" alt="Lapak Gemoy" class="project-img" loading="lazy" onerror="this.src='https://fadhli131002.github.io/portofolio2025/assets/images/Logo/sosial%20media20.png'">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Lapak Gemoy Campaign</h3>
+          <span class="project-client">Lapak Gemoy</span>
+          <p class="project-desc">Materi promosi sosial media visual warna-warni yang menggugah selera untuk UMKM kuliner.</p>
+        </div>
+      </div>
+
+      <!-- Project 13: Performante Auto Detailing (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="social" data-title="Performante Ceramic Coating & Edu-Feeds" data-client="Performante Indonesia" data-desc="Desain visual feeds & carousel edukatif kampanye nano ceramic coating, PPF, dan diferensiasi Clear Vision untuk luxury automotive." data-slides='["assets/sosmed/performante_main.png","assets/sosmed/performante_clearvision_1.png","assets/sosmed/performante_clearvision_3.png","assets/sosmed/performante_juli.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/sosmed/performante_main.png" alt="Performante Edu-Feeds" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Performante Ceramic Coating & Edu-Feeds</h3>
+          <span class="project-client">Performante Indonesia</span>
+          <p class="project-desc">Desain visual feeds & carousel edukatif kampanye nano ceramic coating, PPF, dan diferensiasi Clear Vision untuk luxury automotive.</p>
+        </div>
+      </div>
+
+      <!-- Project 14: Vansgard Paint Protection Film (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="social" data-title="Vansgard PPF Protection Campaign" data-client="Vansgard Indonesia" data-desc="Visual kampanye komprehensif pelindung cat kendaraan (PPF) seri Matte & Supersafe dengan tipografi tegas dan estetika modern." data-slides='["assets/sosmed/vansgard_supersafe.png","assets/sosmed/vansgard_matte.png","assets/sosmed/vansgard_slide1.png","assets/sosmed/vansgard_slide2.png","assets/sosmed/vansgard_slide3.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 5 Slides</span>
+          <img src="assets/sosmed/vansgard_supersafe.png" alt="Vansgard PPF Protection" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Vansgard PPF Protection Campaign</h3>
+          <span class="project-client">Vansgard Indonesia</span>
+          <p class="project-desc">Visual kampanye komprehensif pelindung cat kendaraan (PPF) seri Matte & Supersafe dengan tipografi tegas dan estetika modern.</p>
+        </div>
+      </div>
+
+      <!-- Project 15: Rantiz Detailing Social Feeds (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="social" data-title="Rantiz Detailing Social Feeds" data-client="Rantiz Studio" data-desc="Materi feeds Instagram promosi salon mobil profesional dengan kombinasi tipografi tegas, penawaran musiman, dan edukasi cat kendaraan." data-slides='["assets/sosmed/rantiz_new_1.png","assets/sosmed/rantiz_new_2.png","assets/sosmed/rantiz_new_3.png","assets/sosmed/rantiz_agustus.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/sosmed/rantiz_new_1.png" alt="Rantiz Detailing Social Feeds" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Rantiz Detailing Social Feeds</h3>
+          <span class="project-client">Rantiz Studio</span>
+          <p class="project-desc">Materi feeds Instagram promosi salon mobil profesional dengan kombinasi tipografi tegas, penawaran musiman, dan edukasi cat kendaraan.</p>
+        </div>
+      </div>
+
+      <!-- Project 16: Deluxe Auto Detailing (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="social" data-title="Deluxe Auto Care Promo Campaign" data-client="Deluxe Auto Detailing" data-desc="Desain visual promosi berkala & paket detailing kendaraan beresolusi tinggi dengan tata letak minimalis dan copywriting terstruktur." data-slides='["assets/sosmed/deluxe_sep_1.png","assets/sosmed/deluxe_sep_2.png","assets/sosmed/deluxe_sep_3.png","assets/sosmed/deluxe_sep_4.png","assets/sosmed/deluxe_agustus.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 5 Slides</span>
+          <img src="assets/sosmed/deluxe_sep_1.png" alt="Deluxe Auto Care Campaign" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Deluxe Auto Care Promo Campaign</h3>
+          <span class="project-client">Deluxe Auto Detailing</span>
+          <p class="project-desc">Desain visual promosi berkala & paket detailing kendaraan beresolusi tinggi dengan tata letak minimalis dan copywriting terstruktur.</p>
+        </div>
+      </div>
+
+      <!-- Project 17: Blackstone Window Film Heat Rejection (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="social" data-title="Blackstone Heat Rejection Series" data-client="Blackstone Window Film" data-desc="Konten edukasi media sosial mengenai keunggulan teknologi tolak panas kaca film premium untuk kenyamanan berkendara di iklim tropis." data-slides='["assets/sosmed/blackstone_series_1.png","assets/sosmed/blackstone_series_3.png","assets/sosmed/blackstone_kacafilm_1.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 3 Slides</span>
+          <img src="assets/sosmed/blackstone_series_1.png" alt="Blackstone Window Film" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Blackstone Heat Rejection Series</h3>
+          <span class="project-client">Blackstone Window Film</span>
+          <p class="project-desc">Konten edukasi media sosial mengenai keunggulan teknologi tolak panas kaca film premium untuk kenyamanan berkendara di iklim tropis.</p>
+        </div>
+      </div>
+
+      <!-- Project 18: Car Care & PPF Educational Carousel (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="social" data-title="Car Care & PPF Educational Carousel" data-client="Automotive Aftermarket Campaign" data-desc="Format carousel multi-slide edukatif informatif: panduan perawatan PPF, tips kilap mobil tanpa salon, dan edukasi pencegahan baret cat." data-slides='["assets/sosmed/carcare_kinclong_1.png","assets/sosmed/carcare_kinclong_3.png","assets/sosmed/carcare_ppf_tips.png","assets/sosmed/carcare_coating_fast.png","assets/sosmed/carcare_rusak_cat.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 5 Slides</span>
+          <img src="assets/sosmed/carcare_kinclong_1.png" alt="Car Care & PPF Educational" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Car Care & PPF Educational Carousel</h3>
+          <span class="project-client">Automotive Aftermarket Campaign</span>
+          <p class="project-desc">Format carousel multi-slide edukatif informatif: panduan perawatan PPF, tips kilap mobil tanpa salon, dan edukasi pencegahan baret cat.</p>
+        </div>
+      </div>
+
+      <!-- Project 19: Adem Sepanjang Jalan Campaign (New Drive Asset) -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="social" data-title="Adem Sepanjang Jalan Series" data-client="Blackstone Series" data-desc="Serial kampanye visual media sosial dengan fokus kenyamanan kabin adem berkendara di bawah terik matahari menggunakan kaca film premium." data-slides='["assets/sosmed/blackstone_adem_1.png","assets/sosmed/blackstone_adem_2.png","assets/sosmed/blackstone_adem_3.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 3 Slides</span>
+          <img src="assets/sosmed/blackstone_adem_1.png" alt="Adem Sepanjang Jalan" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Adem Sepanjang Jalan Series</h3>
+          <span class="project-client">Blackstone Series</span>
+          <p class="project-desc">Serial kampanye visual media sosial dengan fokus kenyamanan kabin adem berkendara di bawah terik matahari menggunakan kaca film premium.</p>
+        </div>
+      </div>
+
+      <!-- Project 20: Sinar Mega Abadi - Luxury Villa Window Film Commercial (Video Reel) -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="motion" data-title="Architectural Solar Film Commercial Reel" data-client="Sinar Mega Abadi Window Film" data-desc="Video komersial arsitektural resolusi tinggi yang menampilkan aplikasi kaca film tolak panas premium pada fasad hunian mewah dan modern villa." data-slides='["assets/instagram/Portofolio/vidio/sma_villa_commercial.mp4"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Motion &amp; Video</span>
+          <span class="project-slides-badge video-badge"><i class="material-icons">play_circle_filled</i> Video Reel</span>
+          <video class="project-video" autoplay loop muted playsinline poster="assets/instagram/Portofolio/vidio/sma_villa_cover.png">
+            <source src="assets/instagram/Portofolio/vidio/sma_villa_commercial.mp4" type="video/mp4">
+          </video>
+          <div class="project-play-watermark"><i class="material-icons">play_arrow</i></div>
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">play_arrow</i> Putar Video</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Architectural Solar Film Commercial Reel</h3>
+          <span class="project-client">Sinar Mega Abadi Window Film</span>
+          <p class="project-desc">Video komersial arsitektural resolusi tinggi yang menampilkan aplikasi kaca film tolak panas premium pada fasad hunian mewah dan modern villa.</p>
+        </div>
+      </div>
+
+      <!-- Project 21: Sinar Mega Abadi - Modern Residence Solar Film Showcase (Video Reel) -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="motion" data-title="Residential UV Protection Video Showcase" data-client="Sinar Mega Abadi Window Film" data-desc="Produksi video vertikal komersial (Reels) mengenai efisiensi penolakan radiasi UV dan kenyamanan suhu ruangan pada hunian residensial modern." data-slides='["assets/instagram/Portofolio/vidio/sma_residence_reel.mp4"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Motion &amp; Video</span>
+          <span class="project-slides-badge video-badge"><i class="material-icons">play_circle_filled</i> Video Reel</span>
+          <video class="project-video" autoplay loop muted playsinline poster="assets/instagram/Portofolio/vidio/sma_residence_cover.png">
+            <source src="assets/instagram/Portofolio/vidio/sma_residence_reel.mp4" type="video/mp4">
+          </video>
+          <div class="project-play-watermark"><i class="material-icons">play_arrow</i></div>
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">play_arrow</i> Putar Video</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Residential UV Protection Video Showcase</h3>
+          <span class="project-client">Sinar Mega Abadi Window Film</span>
+          <p class="project-desc">Produksi video vertikal komersial (Reels) mengenai efisiensi penolakan radiasi UV dan kenyamanan suhu ruangan pada hunian residensial modern.</p>
+        </div>
+      </div>
+
+      <!-- Project 22: TSM Land Serpong - Property Lifestyle Video Reel (Video Reel) -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="motion" data-title="TSM Land Serpong Lifestyle & Promo Reel" data-client="PT. Tribrata Surya Mandiri Land" data-desc="Konten video reels Instagram promosi properti dengan dynamic pacing, subtitle motion, dan penawaran New Year Deal hunian eksklusif Serpong." data-slides='["assets/instagram/Portofolio/TSM land/reels/tsm_newyear_deal.mp4"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Motion &amp; Video</span>
+          <span class="project-slides-badge video-badge"><i class="material-icons">play_circle_filled</i> Video Reel</span>
+          <video class="project-video" autoplay loop muted playsinline poster="assets/instagram/Portofolio/TSM land/T banner/mouckup 1.png">
+            <source src="assets/instagram/Portofolio/TSM land/reels/tsm_newyear_deal.mp4" type="video/mp4">
+          </video>
+          <div class="project-play-watermark"><i class="material-icons">play_arrow</i></div>
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">play_arrow</i> Putar Video</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">TSM Land Serpong Lifestyle &amp; Promo Reel</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Konten video reels Instagram promosi properti dengan dynamic pacing, subtitle motion, dan penawaran New Year Deal hunian eksklusif Serpong.</p>
+        </div>
+      </div>
+
+      <!-- Project 23: 3D Spatial Walkthrough Video -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="3d" data-title="3D Spatial & Architecture Cinematic Walkthrough" data-client="Architectural Visualization Project" data-desc="Animasi video rendering 3D sinematik menjelajahi rancangan ruang interior dan fasad arsitektur dengan pencahayaan fotorealistik dan material presisi." data-slides='["assets/instagram/Portofolio/3d/Vidio/3d_spatial_walkthrough.mp4"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge video-badge"><i class="material-icons">videocam</i> 3D Walkthrough</span>
+          <video class="project-video" autoplay loop muted playsinline poster="assets/instagram/Portofolio/3d/Foto/Pinus.png">
+            <source src="assets/instagram/Portofolio/3d/Vidio/3d_spatial_walkthrough.mp4" type="video/mp4">
+          </video>
+          <div class="project-play-watermark"><i class="material-icons">play_arrow</i></div>
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">play_arrow</i> Putar Video 3D</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">3D Spatial &amp; Architecture Cinematic Walkthrough</h3>
+          <span class="project-client">Architectural Visualization Project</span>
+          <p class="project-desc">Animasi video rendering 3D sinematik menjelajahi rancangan ruang interior dan fasad arsitektur dengan pencahayaan fotorealistik dan material presisi.</p>
+        </div>
+      </div>
+
+      <!-- Project 24: Cluster Pinus Modern Townhouse 3D Exterior -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="3d" data-title="Cluster Pinus Modern Townhouse Exterior 3D" data-client="TSM Land / Residential Development" data-desc="Visualisasi 3D eksterior fotorealistik perumahan 2 lantai Cluster Pinus dengan kanopi modern, pencahayaan alami Enscape, dan penataan lanskap hijau." data-slides='["assets/instagram/Portofolio/3d/Foto/Pinus.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-19-00-37-22_Bagian Depan.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-19-00-37-22_samping kiri 1.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-03-24-19-36-29.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/instagram/Portofolio/3d/Foto/Pinus.png" alt="Cluster Pinus 3D Exterior" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Cluster Pinus Modern Townhouse Exterior 3D</h3>
+          <span class="project-client">TSM Land / Residential Development</span>
+          <p class="project-desc">Visualisasi 3D eksterior fotorealistik perumahan 2 lantai Cluster Pinus dengan kanopi modern, pencahayaan alami Enscape, dan penataan lanskap hijau.</p>
+        </div>
+      </div>
+
+      <!-- Project 25: Mediterranean Arch Commercial Shophouse 3D -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="3d" data-title="Mediterranean Arch Commercial Shophouse 3D" data-client="Commercial Property Development" data-desc="Visualisasi 3D ruko komersial 2 lantai dengan fasad lengkung arsitektur Mediterania, kisi kayu vertikal, dan area parkir terintegrasi." data-slides='["assets/instagram/Portofolio/3d/Foto/Ruko.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <img src="assets/instagram/Portofolio/3d/Foto/Ruko.png" alt="Mediterranean Shophouse 3D" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Mediterranean Arch Commercial Shophouse 3D</h3>
+          <span class="project-client">Commercial Property Development</span>
+          <p class="project-desc">Visualisasi 3D ruko komersial 2 lantai dengan fasad lengkung arsitektur Mediterania, kisi kayu vertikal, dan area parkir terintegrasi.</p>
+        </div>
+      </div>
+
+      <!-- Project 26: SOL Retail Store & Modern Apparel Display 3D -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="3d" data-title="SOL Retail Store & Modern Apparel Display 3D" data-client="SOL Fashion Brand" data-desc="Perancangan 3D interior toko pakaian modern industrial dengan struktur display kayu, lighting spotlight terarah, dan kasir ergonomis." data-slides='["assets/instagram/Portofolio/3d/Foto/1.png","assets/instagram/Portofolio/3d/Foto/2.png","assets/instagram/Portofolio/3d/Foto/3.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 3 Slides</span>
+          <img src="assets/instagram/Portofolio/3d/Foto/1.png" alt="SOL Apparel Store 3D" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">SOL Retail Store &amp; Modern Apparel Display 3D</h3>
+          <span class="project-client">SOL Fashion Brand</span>
+          <p class="project-desc">Perancangan 3D interior toko pakaian modern industrial dengan struktur display kayu, lighting spotlight terarah, dan kasir ergonomis.</p>
+        </div>
+      </div>
+
+      <!-- Project 34: Gallardo Modern Canopy & Carport Architectural 3D -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="3d" data-title="Gallardo Modern Canopy &amp; Carport Architectural 3D" data-client="Gallardo Luxury Living Architecture" data-desc="Visualisasi 3D eksterior struktur kanopi carport modern dengan rangka baja presisi, pencahayaan indirect LED, kisi-kisi kayu, dan integrasi lanskap hunian mewah." data-slides='["assets/instagram/Portofolio/3d/Gallardo canopy 1.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 2.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 3.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 4.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 5.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 6.jpg","assets/instagram/Portofolio/3d/Gallardo canopy 7.jpg"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 7 Slides</span>
+          <img src="assets/instagram/Portofolio/3d/Gallardo canopy 1.jpg" alt="Gallardo Canopy 3D" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Gallardo Modern Canopy &amp; Carport Architectural 3D</h3>
+          <span class="project-client">Gallardo Luxury Living Architecture</span>
+          <p class="project-desc">Visualisasi 3D eksterior struktur kanopi carport modern dengan rangka baja presisi, pencahayaan indirect LED, kisi-kisi kayu, dan integrasi lanskap hunian mewah.</p>
+        </div>
+      </div>
+
+      <!-- Project 35: Grand Villa Tropical Modern — Exterior & Interior 3D -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="3d" data-title="Grand Villa Tropical Modern Exterior &amp; Interior 3D" data-client="Private Residential Estate" data-desc="Rangkaian 9 render visual Enscape 3D fotorealistik menyeluruh: eksplorasi fasad geometris modern tropis, roof terrace, dan tata ruang open-plan interior ruang keluarga." data-slides='["assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Depan atas.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Scine depan.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Depan kanan.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Depan atas kanan.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Kiri depan.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Enscape scene 1.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_dalam 2.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_dalam 3.png","assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Dalam 4.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 9 Slides</span>
+          <img src="assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Depan atas.png" alt="Grand Villa Tropical Modern 3D" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Grand Villa Tropical Modern Exterior &amp; Interior 3D</h3>
+          <span class="project-client">Private Residential Estate</span>
+          <p class="project-desc">Rangkaian 9 render visual Enscape 3D fotorealistik menyeluruh: eksplorasi fasad geometris modern tropis, roof terrace, dan tata ruang open-plan interior ruang keluarga.</p>
+        </div>
+      </div>
+
+      <!-- Project 36: Cinematic 3D Architectural Animation & Walkthrough Video -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="3d motion" data-title="Cinematic 3D Architectural Walkthrough Video" data-client="Architectural Spatial Animation" data-desc="Animasi walkthrough 3D sinematik dinamis memperlihatkan transisi pencahayaan natural waktu nyata, detail tekstur material arsitektur, dan pergerakan kamera halus menyusuri setiap sudut ruang." data-slides='["assets/instagram/Portofolio/3d/3d_final_walkthrough.mp4"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Video</span>
+          <span class="project-slides-badge video-badge"><i class="material-icons">videocam</i> 3D Video</span>
+          <video class="project-video" autoplay loop muted playsinline poster="assets/instagram/Portofolio/3d/Enscape_2026-04-16-16-27-04_Scine depan.png">
+            <source src="assets/instagram/Portofolio/3d/3d_final_walkthrough.mp4" type="video/mp4">
+          </video>
+          <div class="project-play-watermark"><i class="material-icons">play_arrow</i></div>
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">play_arrow</i> Putar Video 3D</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Cinematic 3D Architectural Walkthrough Video</h3>
+          <span class="project-client">Architectural Spatial Animation</span>
+          <p class="project-desc">Animasi walkthrough 3D sinematik dinamis memperlihatkan transisi pencahayaan natural waktu nyata, detail tekstur material arsitektur, dan pergerakan kamera halus menyusuri setiap sudut ruang.</p>
+        </div>
+      </div>
+
+      <!-- Project 37: 4-Story Contemporary Residence Architectural Suite -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="3d" data-title="4-Story Contemporary Residence Comprehensive 3D Architecture" data-client="PT. New Ratu Grup / High-End Residential" data-desc="Visualisasi 3D komprehensif 12 slide bangunan residensial modern 4 lantai: fasad depan ultra-modern, master bedroom elegan, courtyard taman dalam, tangga melayang, dan detail material pencahayaan fotorealistik." data-slides='["assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Bagian Depan.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_samping kiri 1.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Kiri 2.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Bagian atas.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Balkon.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Masterbe.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Masterbedroom-1.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Kamar lantai 1.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Kamar lantai 3.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Lorong lantai 1-2.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Taman.png","assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Kamar_mandi_bawah.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">3D Design</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 12 Slides</span>
+          <img src="assets/instagram/Portofolio/3d/Foto/Enscape_2026-06-17-22-26-41_Bagian Depan.png" alt="4-Story Contemporary Residence 3D" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">4-Story Contemporary Residence Comprehensive 3D Architecture</h3>
+          <span class="project-client">PT. New Ratu Grup / High-End Residential</span>
+          <p class="project-desc">Visualisasi 3D komprehensif 12 slide bangunan residensial modern 4 lantai: fasad depan ultra-modern, master bedroom elegan, courtyard taman dalam, tangga melayang, dan detail material pencahayaan fotorealistik.</p>
+        </div>
+      </div>
+
+      <!-- Project 27: H.O.G. Official Event Flag & Chapter Identity -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="logo" data-title="H.O.G. Official Event Flag & Chapter Identity" data-client="Harley Owners Group Indomobil Jakarta" data-desc="Perancangan visual bendera resmi Harley Owners Group (H.O.G.) Indomobil Jakarta Chapter Indonesia dengan motif racing checkered flag dan elang legendaris." data-slides='["assets/instagram/Portofolio/HOG/hog bendera.png","assets/instagram/Portofolio/HOG/raw flag hog Ganjil.png","assets/instagram/Portofolio/HOG/raw flag hog Genap.png","assets/instagram/Portofolio/HOG/Maulid Nabi.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Branding</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/instagram/Portofolio/HOG/hog bendera.png" alt="HOG Official Flag" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">H.O.G. Official Event Flag &amp; Chapter Identity</h3>
+          <span class="project-client">Harley Owners Group Indomobil Jakarta</span>
+          <p class="project-desc">Perancangan visual bendera resmi Harley Owners Group (H.O.G.) Indomobil Jakarta Chapter Indonesia dengan motif racing checkered flag dan elang legendaris.</p>
+        </div>
+      </div>
+
+      <!-- Project 28: Pesta Rakyat Cisauk Girang Event Campaign -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="print" data-title="Pesta Rakyat Cisauk Girang Event Campaign" data-client="Karang Taruna Trisilas & Kecamatan Cisauk" data-desc="Rangkaian poster dan flyer acara peringatan HUT RI ke-81: turnamen esports Mobile Legends & PES, lomba tari budaya, jalan santai, dan malam puncak seni." data-slides='["assets/instagram/Portofolio/Katar/POSTINGAN Poster Lomba.jpg","assets/instagram/Portofolio/Katar/Flayer Agustus 2026.png.jpg","assets/instagram/Portofolio/Katar/Jalan santai.jpg","assets/instagram/Portofolio/Katar/Lomba ML.jpg","assets/instagram/Portofolio/Katar/Lomba PES.jpg","assets/instagram/Portofolio/Katar/Lomba Tari Budaya.jpg","assets/instagram/Portofolio/Katar/Lomba Vidio Short.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Print Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 7 Slides</span>
+          <img src="assets/instagram/Portofolio/Katar/POSTINGAN Poster Lomba.jpg" alt="Pesta Rakyat Cisauk Girang" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Pesta Rakyat Cisauk Girang Event Campaign</h3>
+          <span class="project-client">Karang Taruna Trisilas &amp; Kecamatan Cisauk</span>
+          <p class="project-desc">Rangkaian poster dan flyer acara peringatan HUT RI ke-81: turnamen esports Mobile Legends &amp; PES, lomba tari budaya, jalan santai, dan malam puncak seni.</p>
+        </div>
+      </div>
+
+      <!-- Project 29: TSM Land Serpong Street Light Pole T-Banner -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="print" data-title="TSM Land Serpong Street Light Pole T-Banner" data-client="PT. Tribrata Surya Mandiri Land" data-desc="Desain promosi vertikal outdoor tiang jalan boulevard utama untuk kampanye penjualan hunian residensial, promo cicilan, dan extra hadiah." data-slides='["assets/instagram/Portofolio/TSM land/T banner/mouckup 1.png","assets/instagram/Portofolio/TSM land/T banner/mouckup 2.png","assets/instagram/Portofolio/TSM land/T banner/1.png","assets/instagram/Portofolio/TSM land/T banner/2.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Print Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/instagram/Portofolio/TSM land/T banner/mouckup 1.png" alt="TSM Land T-Banner" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">TSM Land Serpong Street Light Pole T-Banner</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Desain promosi vertikal outdoor tiang jalan boulevard utama untuk kampanye penjualan hunian residensial, promo cicilan, dan extra hadiah.</p>
+        </div>
+      </div>
+
+      <!-- Project 30: Mandiri Steel Building Materials Edu-Carousel -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="social" data-title="Mandiri Steel Building Materials Edu-Carousel" data-client="Toko Besi Mandiri Steel Tangerang Selatan" data-desc="Serial carousel Instagram informatif mengenai tips pemilihan baja ringan, besi beton, dan spesifikasi material konstruksi untuk proyek bangunan." data-slides='["assets/instagram/Portofolio/tokobesi_mandiristeel/Post 1 Slide 1.png","assets/instagram/Portofolio/tokobesi_mandiristeel/Post 1 Slide 2.png","assets/instagram/Portofolio/tokobesi_mandiristeel/Post 2.png","assets/instagram/Portofolio/tokobesi_mandiristeel/Post 3 slide 1.png","assets/instagram/Portofolio/tokobesi_mandiristeel/Post 3 slide 2.png","assets/instagram/Portofolio/tokobesi_mandiristeel/Post 4.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 6 Slides</span>
+          <img src="assets/instagram/Portofolio/tokobesi_mandiristeel/Post 1 Slide 1.png" alt="Mandiri Steel Carousel" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Mandiri Steel Building Materials Edu-Carousel</h3>
+          <span class="project-client">Toko Besi Mandiri Steel Tangerang Selatan</span>
+          <p class="project-desc">Serial carousel Instagram informatif mengenai tips pemilihan baja ringan, besi beton, dan spesifikasi material konstruksi untuk proyek bangunan.</p>
+        </div>
+      </div>
+
+      <!-- Project 31: Resort 60 H Ciputat Living Campaign -->
+      <div class="project-card reveal-on-scroll stagger-1" data-category="social" data-title="Resort 60 H Ciputat Living Campaign" data-client="RAC Property Ciputat" data-desc="Visual promosi hunian bertema resort modern tropis di pusat kota Ciputat dengan penawaran cicilan dan skema booking fee kompetitif." data-slides='["assets/instagram/Portofolio/rac/Konten RACMILIKI RUMAH RASA RESORT DI CIPUTAT.png","assets/instagram/Portofolio/rac/Eid mubarok 2026 RAC.png","assets/instagram/Portofolio/rac/Hari raya Nyepi 2026 RAC.png","assets/instagram/Portofolio/rac/Wafat Isa Almasih.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/instagram/Portofolio/rac/Konten RACMILIKI RUMAH RASA RESORT DI CIPUTAT.png" alt="Resort 60 H Ciputat" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Resort 60 H Ciputat Living Campaign</h3>
+          <span class="project-client">RAC Property Ciputat</span>
+          <p class="project-desc">Visual promosi hunian bertema resort modern tropis di pusat kota Ciputat dengan penawaran cicilan dan skema booking fee kompetitif.</p>
+        </div>
+      </div>
+
+      <!-- Project 32: Raysah Fashion E-Commerce Banner & Feeds -->
+      <div class="project-card reveal-on-scroll stagger-2" data-category="social" data-title="Raysah Fashion E-Commerce Banner & Feeds" data-client="Raysah Fashion Muslimah" data-desc="Materi visual etalase digital Shopee dan kampanye promo musiman (Big Sale Ramadan, 11.11, 12.12) untuk brand busana muslimah elegan." data-slides='["assets/instagram/Portofolio/banner shopee/Banner Shopee 1.png","assets/instagram/Portofolio/banner shopee/Banner Shopee 2.png","assets/instagram/Portofolio/banner shopee/Banner Shopee 3.png","assets/instagram/Portofolio/banner shopee/mouckup sosial media.png"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 4 Slides</span>
+          <img src="assets/instagram/Portofolio/banner shopee/Banner Shopee 1.png" alt="Raysah E-Commerce Banner" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">Raysah Fashion E-Commerce Banner &amp; Feeds</h3>
+          <span class="project-client">Raysah Fashion Muslimah</span>
+          <p class="project-desc">Materi visual etalase digital Shopee dan kampanye promo musiman (Big Sale Ramadan, 11.11, 12.12) untuk brand busana muslimah elegan.</p>
+        </div>
+      </div>
+
+      <!-- Project 33: TSM Land 'Kreasikan Rumah Impianmu' Carousel Series -->
+      <div class="project-card reveal-on-scroll stagger-3" data-category="social" data-title="TSM Land 'Kreasikan Rumah Impianmu' Series" data-client="PT. Tribrata Surya Mandiri Land" data-desc="Rangkaian postingan carousel interaktif 6 slide mengenai fleksibilitas denah rumah 2 lantai, 3 kamar tidur, dan fitur smart home security." data-slides='["assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/Balcon.jpg","assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/Cuci Jemur.jpg","assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/kamar mandi.jpg","assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/kamar.jpg","assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/Playground.jpg","assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/ruang tamu.jpg"]'>
+        <div class="project-media-box">
+          <span class="project-category-badge">Social Media</span>
+          <span class="project-slides-badge"><i class="material-icons">collections</i> 6 Slides</span>
+          <img src="assets/instagram/Portofolio/TSM land/sosmed/Kreasikan Rumah Impianmu/Balcon.jpg" alt="TSM Land Kreasikan Rumah Impianmu" class="project-img" loading="lazy">
+          <div class="project-hover-overlay">
+            <span class="project-hover-btn"><i class="material-icons">visibility</i> Lihat Karya</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <h3 class="project-title">TSM Land 'Kreasikan Rumah Impianmu' Series</h3>
+          <span class="project-client">PT. Tribrata Surya Mandiri Land</span>
+          <p class="project-desc">Rangkaian postingan carousel interaktif 6 slide mengenai fleksibilitas denah rumah 2 lantai, 3 kamar tidur, dan fitur smart home security.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+    <!-- Experience & Resume Section -->
+  <section class="section" id="experience">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge">Jejak Karier & Pendidikan</span>
+      <h2 class="section-title">Experience & Resume</h2>
+      <p class="section-subtitle">
+        Perjalanan profesional dalam industri kreatif dan teknologi menangani aset 3D, desain grafis, video editing, dan digitalisasi sistem.
+      </p>
+    </div>
+
+    <!-- Education Highlight -->
+    <div class="education-showcase reveal-on-scroll stagger-1">
+      <div class="edu-icon-circle">
+        <i class="material-icons" style="font-size: 1.8rem;">school</i>
+      </div>
+      <div class="edu-details">
+        <span class="edu-badge">EDUCATION</span>
+        <h3 class="edu-title">Universitas Pamulang</h3>
+        <p class="edu-major">Sistem Informasi</p>
+      </div>
+    </div>
+
+    <!-- Experience Timeline List -->
+    <div class="timeline-list">
+      <!-- Role 1: PT. New Ratu Grup -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge current">2026 — Sekarang</span>
+        <h3 class="timeline-role">3D Modeler, Graphic Designer, Video Editor & Web Developer</h3>
+        <span class="timeline-company">PT. New Ratu Grup</span>
+        <ul class="timeline-bullets">
+          <li>Bertanggung jawab membuat aset 3D Modeling untuk kebutuhan marketing & presentasi produk</li>
+          <li>Mendesain materi grafis untuk kebutuhan digital dan cetak perusahaan</li>
+          <li>Mengedit video promosi dan konten media sosial menggunakan alur kerja yang efisien</li>
+          <li>Mengembangkan dan maintenance website perusahaan untuk mendukung branding dan informasi produk</li>
+          <li>Mengembangkan sistem perusahaan untuk mendukung operasional dan digitalisasi internal</li>
+        </ul>
+      </div>
+
+      <!-- Role 2: PT. Tribrata Surya Mandiri Land -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2024 — 2026</span>
+        <h3 class="timeline-role">Graphic Designer</h3>
+        <span class="timeline-company">PT. Tribrata Surya Mandiri Land</span>
+        <ul class="timeline-bullets">
+          <li>Berkolaborasi dengan tim konten untuk menghasilkan postingan yang efektif</li>
+          <li>Mendesain brosur, flyer, dan pamflet untuk keperluan pemasaran</li>
+          <li>Menyusun elemen visual yang konsisten untuk meningkatkan citra perusahaan</li>
+          <li>Mengambil footage yang mendukung narasi visual perusahaan</li>
+          <li>Menggunakan software Adobe Premiere Pro, Adobe After Effects untuk mengedit video</li>
+          <li>Terus mencari inspirasi dan membawa ide-ide segar ke dalam proyek desain</li>
+        </ul>
+      </div>
+
+      <!-- Role 3: PT. Samara Land Group -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2024</span>
+        <h3 class="timeline-role">Content Designer</h3>
+        <span class="timeline-company">PT. Samara Land Group</span>
+        <ul class="timeline-bullets">
+          <li>Membuat grafis, gambar, dan ilustrasi untuk posting media sosial, story, dan iklan</li>
+          <li>Mengoptimalkan desain untuk berbagai platform media sosial</li>
+          <li>Berkolaborasi dengan tim media sosial untuk menghasilkan ide konten kreatif</li>
+          <li>Update dengan tren dan gaya desain media sosial terkini</li>
+        </ul>
+      </div>
+
+      <!-- Role 4: HDI Learning Center BSD -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2023 — 2024</span>
+        <h3 class="timeline-role">Content Designer</h3>
+        <span class="timeline-company">HDI Learning Center BSD</span>
+        <ul class="timeline-bullets">
+          <li>Mengembangkan materi pemasaran: brosur, pamflet, dan poster</li>
+          <li>Bekerja sama dengan tim marketing, sales, dan produk untuk memahami kebutuhan desain</li>
+          <li>Menjaga konsistensi tipografi, warna, dan elemen brand</li>
+          <li>Mengoptimalkan gambar produk untuk online dan cetak</li>
+          <li>Mengintegrasikan feedback dan revisi ke dalam desain</li>
+        </ul>
+      </div>
+
+      <!-- Role 5: PT. Hagane Perkasa Makmur -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2022 — 2023</span>
+        <h3 class="timeline-role">Content Specialist</h3>
+        <span class="timeline-company">PT. Hagane Perkasa Makmur</span>
+        <ul class="timeline-bullets">
+          <li>Mengelola dan mempublikasikan konten di media sosial, website, dan blog</li>
+          <li>Mengoptimalkan konten untuk SEO agar visibilitas meningkat</li>
+          <li>Berkolaborasi dengan tim desain grafis dan marketing</li>
+        </ul>
+      </div>
+
+      <!-- Role 6: PT. Lingtang Persada Propertindo -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2022 — 2023</span>
+        <h3 class="timeline-role">Graphic Designer</h3>
+        <span class="timeline-company">PT. Lingtang Persada Propertindo</span>
+        <ul class="timeline-bullets">
+          <li>Mengembangkan materi pemasaran: brosur, pamflet, dan poster</li>
+          <li>Bekerja dengan cross-functional teams untuk memahami kebutuhan desain</li>
+          <li>Menjaga konsistensi brand di semua materi desain</li>
+          <li>Mengoptimalkan gambar produk untuk online dan cetak</li>
+          <li>Mengintegrasikan feedback dan revisi ke dalam desain</li>
+        </ul>
+      </div>
+
+      <!-- Role 7: Adil Wiguna & Erlyana's Youtube Channel -->
+      <div class="timeline-item reveal-on-scroll">
+        <span class="timeline-dot"></span>
+        <span class="timeline-period-badge">2018 — 2020</span>
+        <h3 class="timeline-role">Video Editor</h3>
+        <span class="timeline-company">Adil Wiguna & Erlyana's Youtube Channel</span>
+        <ul class="timeline-bullets">
+          <li>Merancang banner channel YouTube dan gambar profil yang menarik</li>
+          <li>Mengedit konten video agar menarik dan kohesif sesuai brief</li>
+          <li>Mengimpor dan mengorganisir rekaman video, klip audio, grafis, dan aset media</li>
+          <li>Memastikan kualitas audio tinggi dengan mixing dan noise reduction</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials Section -->
+  <section class="section" id="testimonials">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge">Ulasan Klien</span>
+      <h2 class="section-title">Client Testimonials</h2>
+      <p class="section-subtitle">
+        Apa kata mereka yang telah berkolaborasi dalam berbagai proyek desain dan produksi kreatif bersama saya.
+      </p>
+    </div>
+
+    <div class="testimonials-grid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card reveal-on-scroll">
+        <p class="quote-text">
+          "Muhammad Fadhli adalah seorang desainer grafis berbakat, energik, dan karyanya selalu segar, berani, inovatif, dan menarik. Komunikasinya sangat baik, efisien dalam biaya serta waktu. Saya sangat merekomendasikan tanpa ragu-ragu untuk berbagai jenis proyek desain besar maupun kecil."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://fadhli131002.github.io/portofolio2025/assets/images/avatar-2.png" alt="Gita Ayu" class="author-avatar">
+          <div>
+            <h4 class="author-name">Gita Ayu Candraningtyas</h4>
+            <span class="author-role">Art Director & Client</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card reveal-on-scroll">
+        <p class="quote-text">
+          "Fadhli telah bekerja pada tiga proyek berbeda untuk saya, dan saya akan terus menggunakan jasanya untuk semua kebutuhan kreatif saya di masa depan. Dia selalu tanggap, responsif, dan memiliki standar eksekusi yang sangat rapi."
+        </p>
+        <div class="testimonial-author">
+          <img src="https://fadhli131002.github.io/portofolio2025/assets/images/avatar-1.png" alt="Dhia Arrasy" class="author-avatar">
+          <div>
+            <h4 class="author-name">Dhia Arrasy</h4>
+            <span class="author-role">Creative Producer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration & Services Inquiry Section -->
+  <section class="section" id="pricing">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="pricing_badge">Kolaborasi</span>
+      <h2 class="section-title" data-i18n="pricing_title">Collaboration Plans</h2>
+      <p class="section-subtitle" data-i18n="pricing_subtitle">
+        Pilih model kerja sama yang paling sesuai dengan skala dan kebutuhan kreatif proyek Anda.
+      </p>
+    </div>
+
+    <div class="pricing-grid">
+      <!-- Plan 1 -->
+      <div class="pricing-card reveal-on-scroll">
+        <div class="tier-header">
+          <span class="tier-badge" data-i18n="pricing_plan1_badge">Satuan / Proyek</span>
+          <h3 class="tier-name">Project-Based</h3>
+        </div>
+        <ul class="tier-features">
+          <li data-i18n="plan1_f1">Desain Logo & Brand Identity</li>
+          <li data-i18n="plan1_f2">Video Editing komersial / YouTube</li>
+          <li data-i18n="plan1_f3">Flyer, Brosur, & Poster Promosi</li>
+          <li data-i18n="plan1_f4">Desain 3D Booth / Stage Exhibition</li>
+          <li data-i18n="plan1_f5">Maksimal 3x revisi minor</li>
+          <li data-i18n="plan1_f6">File master format lengkap (AI/PSD/MP4)</li>
+        </ul>
+        <a href="https://wa.me/628881124215?text=Halo%20Fadhli,%20saya%20tertarik%20dengan%20layanan%20Project-Based" target="_blank" class="btn-glass" data-i18n="pricing_plan1_btn">Diskusikan Proyek</a>
+      </div>
+
+      <!-- Plan 2 (Featured) -->
+      <div class="pricing-card featured reveal-on-scroll stagger-2">
+        <div class="tier-header">
+          <span class="tier-badge" data-i18n="pricing_plan2_badge">Terpopuler</span>
+          <h3 class="tier-name">Monthly Retainer</h3>
+        </div>
+        <ul class="tier-features">
+          <li data-i18n="plan2_f1">Kebutuhan desain & video bulanan rutin</li>
+          <li data-i18n="plan2_f2">15-30 konten visual sosial media</li>
+          <li data-i18n="plan2_f3">Video Reels / Shorts berkala</li>
+          <li data-i18n="plan2_f4">Dedicated turnaround time cepat</li>
+          <li data-i18n="plan2_f5">Prioritas revisi & konsultasi langsung</li>
+          <li data-i18n="plan2_f6">Laporan progres berkala</li>
+        </ul>
+        <a href="https://wa.me/628881124215?text=Halo%20Fadhli,%20saya%20tertarik%20dengan%20paket%20Monthly%20Retainer" target="_blank" class="btn-primary" data-i18n="pricing_plan2_btn">Pilih Retainer</a>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="pricing-card reveal-on-scroll">
+        <div class="tier-header">
+          <span class="tier-badge" data-i18n="pricing_plan3_badge">Dedicated / Tim</span>
+          <h3 class="tier-name">Full-Time / Contract</h3>
+        </div>
+        <ul class="tier-features">
+          <li data-i18n="plan3_f1">Dedikasi penuh untuk perusahaan/agensi</li>
+          <li data-i18n="plan3_f2">End-to-end creative production</li>
+          <li data-i18n="plan3_f3">Kolaborasi aktif dengan marketing team</li>
+          <li data-i18n="plan3_f4">Remote maupun on-site Tangerang/Jakarta</li>
+          <li data-i18n="plan3_f5">Manajemen brand kit komprehensif</li>
+          <li data-i18n="plan3_f6">Kontrak kerja sama fleksibel</li>
+        </ul>
+        <a href="https://wa.me/628881124215?text=Halo%20Fadhli,%20saya%20ingin%20berbicara%20mengenai%20kesempatan%20Full-Time%20/%20Kontrak" target="_blank" class="btn-glass" data-i18n="pricing_plan3_btn">Hubungi untuk Kontrak</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" id="faq">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="faq_badge">Tanya Jawab</span>
+      <h2 class="section-title" data-i18n="faq_title">Frequently Asked Questions</h2>
+      <p class="section-subtitle" data-i18n="faq_subtitle">
+        Pertanyaan seputar proses kerja, software, serta teknis kolaborasi bersama saya.
+      </p>
+    </div>
+
+    <div class="faq-list">
+      <!-- FAQ 1 -->
+      <div class="faq-item active reveal-on-scroll">
+        <button class="faq-header">
+          <span data-i18n="faq_q1">Software dan tools apa saja yang Anda gunakan?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a1">
+            Saya menggunakan software standar industri: <strong>Adobe Photoshop</strong> & <strong>Illustrator</strong> untuk desain grafis/vektor, <strong>Premiere Pro</strong> untuk video editing, <strong>After Effects</strong> untuk motion graphics, <strong>Figma</strong> untuk web/UI design, serta <strong>Blender / 3ds Max</strong> untuk pemodelan 3D dan rendering spasial.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="faq-item reveal-on-scroll">
+        <button class="faq-header">
+          <span data-i18n="faq_q2">Berapa lama estimasi pengerjaan suatu proyek?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a2">
+            Waktu pengerjaan bergantung pada kompleksitas dan ruang lingkup proyek. Untuk logo atau flyer biasanya membutuhkan 2–4 hari kerja. Video editing dan motion graphics berkisar 3–7 hari kerja, sedangkan proyek 3D booth/interior komprehensif berkisar 5–10 hari kerja.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="faq-item reveal-on-scroll">
+        <button class="faq-header">
+          <span data-i18n="faq_q3">Apakah Anda menerima kerja sama secara remote?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a3">
+            Ya, sebagian besar proyek saya dikerjakan secara remote dengan koordinasi yang intens melalui WhatsApp, Google Meet, Zoom, atau email. Untuk wilayah Jabodetabek (khususnya Tangerang & Jakarta), pertemuan tatap muka (*on-site meeting*) juga sangat memungkinkan.
+          </p>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="faq-item reveal-on-scroll">
+        <button class="faq-header">
+          <span data-i18n="faq_q4">Bagaimana ketentuan revisi dan penyerahan file akhir?</span>
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">
+          <p data-i18n="faq_a4">
+            Setiap proyek menyertakan revisi untuk memastikan hasil sesuai harapan Anda. Setelah disetujui, semua file master final (vektor AI/EPS/SVG, PSD, cetak PDF CMYK, MP4 resolusi tinggi, atau link cloud drive) akan diserahkan secara lengkap.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Contact Cards -->
+  <section class="section" id="contact" style="padding-top: 2rem;">
+    <div class="section-header reveal-on-scroll">
+      <span class="section-badge" data-i18n="contact_badge">Mari Terhubung</span>
+      <h2 class="section-title" data-i18n="contact_title">Get In Touch</h2>
+      <p class="section-subtitle" data-i18n="contact_subtitle">
+        Tertarik mewujudkan proyek visual berikutnya? Hubungi saya langsung melalui kontak di bawah ini.
+      </p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Email Card -->
+      <a href="mailto:mha.fadhli@gmail.com" class="contact-card reveal-on-scroll stagger-1">
+        <i class="material-icons contact-icon">email</i>
+        <span class="contact-lbl" data-i18n="contact_email_lbl">Email</span>
+        <span class="contact-val">mha.fadhli@gmail.com</span>
+      </a>
+
+      <!-- WhatsApp Card -->
+      <a href="https://wa.me/628881124215" target="_blank" class="contact-card reveal-on-scroll stagger-2">
+        <i class="material-icons contact-icon" style="color: #25D366;">chat</i>
+        <span class="contact-lbl" data-i18n="contact_wa_lbl">WhatsApp / Telp</span>
+        <span class="contact-val">(+62) 888 1124 215</span>
+      </a>
+
+      <!-- Location Card -->
+      <div class="contact-card reveal-on-scroll stagger-3">
+        <i class="material-icons contact-icon">location_on</i>
+        <span class="contact-lbl" data-i18n="contact_loc_lbl">Lokasi</span>
+        <span class="contact-val" data-i18n="contact_loc_val">Cisauk, Tangerang, Indonesia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <a href="#" class="logo-wrapper">
+          <span class="logo-name">Muhammad Fadhli</span>
+          <span class="logo-tag">Creative</span>
+        </a>
+        <div class="footer-links">
+          <a href="#about" data-i18n="nav_about">About</a>
+          <a href="#services" data-i18n="nav_services">Layanan</a>
+          <a href="#portfolio" data-i18n="nav_portfolio">Portofolio</a>
+          <a href="#experience" data-i18n="nav_experience">Pengalaman</a>
+          <a href="https://www.linkedin.com/in/muhammad-fadhli-582795201/" target="_blank">LinkedIn</a>
+          <a href="https://www.instagram.com/mha_fadhli/" target="_blank">Instagram</a>
+          <a href="https://wa.me/628881124215" target="_blank">WhatsApp</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span data-i18n="footer_rights">© 2026 Muhammad Fadhli. All rights reserved.</span>
+        <span>Crafted with Google Flow Aesthetic</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       UPGRADED #projects-modal (MULTIMEDIA GALLERY)
+       ========================================== -->
+  <div id="projects-modal" role="dialog" aria-modal="true" aria-labelledby="modal-projects-title">
+    <div class="projects-modal-backdrop" id="projects-modal-backdrop"></div>
+    <div class="projects-modal-container">
+      
+      <!-- Modal Header -->
+      <div class="modal-header-section">
+        <div>
+          <div class="modal-badge-tag">
+            <span class="modal-badge-dot"></span>
+            <span>MULTIMEDIA SHOWCASE</span>
+          </div>
+          <h2 class="modal-main-title" id="modal-projects-title">Selected Works Gallery</h2>
+          <p class="modal-main-sub">Galeri kurasi karya multimedia: Video sinematik, visual 3D interior, kampanye media sosial, dan desain antarmuka interaktif.</p>
+        </div>
+        <button class="modal-close-x-btn" id="modal-close-x" aria-label="Tutup Galeri">
+          <i class="material-icons">close</i>
+        </button>
+      </div>
+
+      <!-- Modal Body (CSS Grid Gallery) -->
+      <div class="modal-gallery-body">
+        <div class="modal-grid-layout">
+          
+          <!-- Card 1 (Format Video): Villa Architectural Film Commercial -->
+          <article class="gallery-card">
+            <div class="gallery-media-container">
+              <video class="gallery-media" autoplay loop muted playsinline poster="assets/instagram/Portofolio/vidio/sma_villa_cover.png">
+                <source src="assets/instagram/Portofolio/vidio/sma_villa_commercial.mp4" type="video/mp4">
+              </video>
+              <div class="gallery-badge-overlay badge-video">
+                <i class="material-icons" style="font-size: 0.95rem;">videocam</i>
+                <span>VIDEO REEL</span>
+              </div>
+              <div class="video-play-indicator">
+                <i class="material-icons" style="font-size: 1.25rem;">play_arrow</i>
+              </div>
+            </div>
+            <div class="gallery-info-container">
+              <span class="gallery-card-client">Sinar Mega Abadi • Window Film</span>
+              <h3 class="gallery-card-title">Villa Architectural Film Commercial</h3>
+              <p class="gallery-card-desc">Produksi video promosi sinematik kaca film arsitektural villa mewah dengan ritme dinamis, footage premium, dan visual storytelling yang tajam.</p>
+            </div>
+          </article>
+
+          <!-- Card 2 (Format Gambar): 3D Pinus Townhouse Exterior -->
+          <article class="gallery-card">
+            <div class="gallery-media-container">
+              <img src="assets/instagram/Portofolio/3d/Foto/Pinus.png" alt="3D Pinus Townhouse Exterior" class="gallery-media" loading="lazy">
+              <div class="gallery-badge-overlay badge-image">
+                <i class="material-icons" style="font-size: 0.95rem;">view_in_ar</i>
+                <span>3D SPATIAL</span>
+              </div>
+            </div>
+            <div class="gallery-info-container">
+              <span class="gallery-card-client">Residential & Architectural 3D</span>
+              <h3 class="gallery-card-title">Pinus Modern Townhouse 3D Exterior</h3>
+              <p class="gallery-card-desc">Visualisasi arsitektur 3D fasad perumahan modern tropis dengan pencahayaan natural ambient Enscape, material bata ekspos, dan lanskap asri.</p>
+            </div>
+          </article>
+
+          <!-- Card 3 (Format Gambar): Social Media Campaign -->
+          <article class="gallery-card">
+            <div class="gallery-media-container">
+              <img src="assets/sosmed/performante_main.png" alt="Performante Automotive Social Media Campaign" class="gallery-media" loading="lazy">
+              <div class="gallery-badge-overlay badge-image">
+                <i class="material-icons" style="font-size: 0.95rem;">campaign</i>
+                <span>CAMPAIGN</span>
+              </div>
+            </div>
+            <div class="gallery-info-container">
+              <span class="gallery-card-client">Performante Indonesia • Detailing & PPF</span>
+              <h3 class="gallery-card-title">Clear Vision & Coating Feeds</h3>
+              <p class="gallery-card-desc">Sistem aset promosi visual menyeluruh untuk Instagram studio otomotif mewah, menonjolkan fitur pelindung cat & diferensiasi Clear Vision.</p>
+            </div>
+          </article>
+
+          <!-- Card 4 (Format Gambar): Interactive Web UI -->
+          <article class="gallery-card">
+            <div class="gallery-media-container">
+              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Interactive Web UI" class="gallery-media" loading="lazy">
+              <div class="gallery-badge-overlay badge-image">
+                <i class="material-icons" style="font-size: 0.95rem;">devices</i>
+                <span>WEB DESIGN</span>
+              </div>
+            </div>
+            <div class="gallery-info-container">
+              <span class="gallery-card-client">Tech Startup & SaaS</span>
+              <h3 class="gallery-card-title">Interactive Web UI</h3>
+              <p class="gallery-card-desc">Antarmuka website modern bertema dark mode dengan perpaduan glassmorphism, micro-interactions responsif, dan struktur navigasi intuitif.</p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Portfolio Project Detail & Carousel Lightbox Modal -->
+  <div id="portfolio-lightbox-modal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Detail Proyek" style="display: none;">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-wrapper">
+      <div class="lightbox-content">
+        <!-- Close Button -->
+        <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Tutup Detail">
+          <i class="material-icons">close</i>
+        </button>
+
+        <!-- Media Stage -->
+        <div class="lightbox-media-stage">
+          <button class="lightbox-nav-btn prev" id="lightbox-prev-btn" aria-label="Slide Sebelumnya">
+            <i class="material-icons">chevron_left</i>
+          </button>
+          <div class="lightbox-img-container">
+            <img src="" alt="" id="lightbox-active-img" class="lightbox-active-img">
+            <video src="" id="lightbox-active-video" class="lightbox-active-video" controls style="display: none;"></video>
+          </div>
+          <button class="lightbox-nav-btn next" id="lightbox-next-btn" aria-label="Slide Selanjutnya">
+            <i class="material-icons">chevron_right</i>
+          </button>
+        </div>
+
+        <!-- Carousel Indicators & Counter -->
+        <div class="lightbox-carousel-bar" id="lightbox-carousel-bar">
+          <div class="lightbox-counter" id="lightbox-counter">Slide 1 / 1</div>
+          <div class="lightbox-dots" id="lightbox-dots"></div>
+        </div>
+
+        <!-- Details Info -->
+        <div class="lightbox-info-pane">
+          <div class="lightbox-header-row">
+            <span class="lightbox-badge" id="lightbox-category-badge">Social Media</span>
+            <span class="lightbox-client" id="lightbox-client-name">Client Name</span>
+          </div>
+          <h3 class="lightbox-title" id="lightbox-title">Project Title</h3>
+          <p class="lightbox-desc" id="lightbox-desc">Project Description</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <button class="back-to-top-btn" id="back-to-top-btn" aria-label="Back to Top">
+    <i class="material-icons">arrow_upward</i>
+  </button>
+</body>
+</html>
+
+
+
+
