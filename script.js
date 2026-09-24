@@ -49,25 +49,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // --- 2B. Floating Glassmorphism Back to Top Controller ---
+  // --- 2A. Sticky Glassmorphism Header & Back to Top Controller ---
+  const siteHeader = document.getElementById('site-header') || document.querySelector('.site-header');
   const backToTopBtn = document.getElementById('back-to-top-btn');
-  if (backToTopBtn) {
-    let scrollTicking = false;
-    window.addEventListener('scroll', () => {
-      if (!scrollTicking) {
-        window.requestAnimationFrame(() => {
-          const currentScroll = window.scrollY || document.documentElement.scrollTop || 0;
-          if (currentScroll > 300) {
-            backToTopBtn.classList.add('visible');
-          } else {
-            backToTopBtn.classList.remove('visible');
-          }
-          scrollTicking = false;
-        });
-        scrollTicking = true;
-      }
-    }, { passive: true });
 
+  function updateScrollState() {
+    const currentScroll = window.scrollY || document.documentElement.scrollTop || 0;
+
+    // Header sticky transition: Add .header-scrolled when user scrolls down > 50px
+    if (siteHeader) {
+      if (currentScroll > 50) {
+        siteHeader.classList.add('header-scrolled');
+      } else {
+        siteHeader.classList.remove('header-scrolled');
+      }
+    }
+
+    // Back to top floating button: Show when scrolled > 300px
+    if (backToTopBtn) {
+      if (currentScroll > 300) {
+        backToTopBtn.classList.add('visible');
+      } else {
+        backToTopBtn.classList.remove('visible');
+      }
+    }
+  }
+
+  // Throttled scroll listener with requestAnimationFrame for 60fps performance
+  let scrollTicking = false;
+  window.addEventListener('scroll', () => {
+    if (!scrollTicking) {
+      window.requestAnimationFrame(() => {
+        updateScrollState();
+        scrollTicking = false;
+      });
+      scrollTicking = true;
+    }
+  }, { passive: true });
+
+  // Initial call on page load to handle refresh when already scrolled
+  updateScrollState();
+
+  // Smooth scroll to top when button clicked
+  if (backToTopBtn) {
     backToTopBtn.addEventListener('click', (e) => {
       e.preventDefault();
       window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -343,27 +367,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuBtn = document.getElementById('mobile-menu-btn');
   const navLinks = document.querySelector('.nav-links');
   if (mobileMenuBtn && navLinks) {
-    mobileMenuBtn.addEventListener('click', () => {
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      if (!isVisible) {
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '4.5rem';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.background = 'rgba(0,0,0,0.95)';
-        navLinks.style.padding = '2rem';
-        navLinks.style.borderBottom = '1px solid rgba(255,255,255,0.15)';
-      }
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navLinks.classList.toggle('mobile-active');
     });
 
+    // Close when clicking any menu link
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        if (window.innerWidth <= 992) {
-          navLinks.style.display = 'none';
-        }
+        navLinks.classList.remove('mobile-active');
       });
+    });
+
+    // Close when clicking outside of navLinks & mobileMenuBtn
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navLinks.classList.remove('mobile-active');
+      }
     });
   }
 

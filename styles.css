@@ -61,18 +61,19 @@ body {
   background: rgba(255, 255, 255, 0.45);
 }
 
-/* Header & Navbar */
+/* Header & Navbar - Sticky Glassmorphic Header */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.65);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--border-subtle);
-  transition: var(--transition);
+  z-index: 100;
+  background-color: rgba(10, 10, 10, 0.35);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
 }
 
 .nav-container {
@@ -83,6 +84,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: height 0.3s ease, padding 0.3s ease;
+  box-sizing: border-box;
+}
+
+/* Scrolled Sticky State: Applied via JS when user scrolls down > 50px */
+.site-header.header-scrolled {
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.55);
+}
+
+.site-header.header-scrolled .nav-container {
+  height: 3.6rem;
 }
 
 .logo-wrapper {
@@ -202,31 +218,57 @@ body {
 }
 
 .btn-nav-cta {
-  padding: 0.55rem 1.25rem;
+  padding: 0.5rem 1.15rem;
   font-size: 0.85rem;
   border-radius: var(--radius-pill);
   background: #ffffff;
   color: #000;
-  font-weight: 500;
+  font-weight: 600;
   text-decoration: none;
   transition: var(--transition);
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  flex-shrink: 0;
+}
+
+.btn-nav-cta .whatsapp-nav-icon {
+  width: 15px;
+  height: 15px;
+  color: #075e54;
+  flex-shrink: 0;
 }
 
 .btn-nav-cta:hover {
-  background: rgba(255, 255, 255, 0.85);
-  transform: scale(1.03);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 18px rgba(255, 255, 255, 0.35);
+  transform: translateY(-1px) scale(1.02);
 }
 
 .mobile-menu-btn {
   display: none;
-  background: none;
-  border: none;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  align-items: center;
+  justify-content: center;
   color: #fff;
   cursor: pointer;
-  padding: 0.5rem;
+  padding: 0;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.mobile-menu-btn .material-icons {
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 /* Hero Section */
@@ -1921,9 +1963,39 @@ body {
 @media (max-width: 992px) {
   .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(12, 12, 16, 0.96);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.85);
+    padding: 1.25rem 1.5rem;
+    gap: 0.85rem;
+    z-index: 999;
+  }
+  .nav-links.mobile-active {
+    display: flex;
+    animation: mobileMenuSlideDown 0.25s ease forwards;
+  }
+  .nav-links a {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--text-secondary);
+    transition: color 0.2s ease, padding-left 0.2s ease;
+  }
+  .nav-links a:hover {
+    color: #fff;
+    padding-left: 0.5rem;
   }
   .mobile-menu-btn {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
   }
   .about-card {
     grid-template-columns: 1fr;
@@ -1945,45 +2017,71 @@ body {
   }
 }
 
+@keyframes mobileMenuSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 @media (max-width: 768px) {
-  /* 1. Header & Navbar (fits within 320-390px screens) */
+  /* 1. Header & Navbar (fits within 320-390px screens without horizontal overflow) */
   .site-header {
     width: 100%;
     max-width: 100vw;
-    overflow: hidden;
+    box-sizing: border-box;
+    overflow: visible; /* Never clip dropdown drawer */
   }
   .nav-container {
     padding: 0 1rem;
-    height: 4rem;
+    height: 3.85rem;
     width: 100%;
     max-width: 100%;
+    box-sizing: border-box;
+  }
+  .site-header.header-scrolled .nav-container {
+    height: 3.25rem;
   }
   .logo-wrapper {
     gap: 0.4rem;
+    flex-shrink: 0;
   }
   .logo-name {
-    font-size: 1.12rem;
+    font-size: 1.15rem;
     white-space: nowrap;
   }
   .logo-tag {
-    display: none;
+    display: none !important;
   }
   .nav-actions {
     gap: 0.45rem;
+    flex-shrink: 0;
   }
-  .nav-actions .social-icon-btn {
-    display: none; /* Hide desktop social icons on mobile header */
+  .nav-actions .social-icon-btn,
+  .site-header .social-icon-btn,
+  .header-social-btn {
+    display: none !important; /* Hide desktop social icons on mobile header */
   }
   .lang-switch-btn {
     padding: 0.28rem 0.55rem;
     font-size: 0.74rem;
+    flex-shrink: 0;
   }
   .btn-nav-cta {
-    padding: 0.4rem 0.85rem;
-    font-size: 0.78rem;
+    padding: 0.38rem 0.75rem;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+    border-radius: var(--radius-pill);
+    gap: 0.3rem;
   }
   .mobile-menu-btn {
-    padding: 0.4rem;
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
   }
 
   /* 2. Hero Section */
@@ -2110,13 +2208,49 @@ body {
     padding: 0.42rem 0.95rem;
     font-size: 0.8rem;
   }
-  .footer-top,
-  .footer-bottom {
+  /* Mobile Footer Refinements (Clean, balanced layout on mobile) */
+  .site-footer {
+    padding: 3rem 1.25rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+  .footer-container {
+    gap: 2rem;
+  }
+  .footer-top {
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5rem;
     width: 100%;
-    max-width: 100%;
+  }
+  .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 0.85rem;
+    width: 100%;
+  }
+  .footer-links a {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-pill);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.2s ease;
+  }
+  .footer-links a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    width: 100%;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-top: 1.5rem;
   }
   .back-to-top-btn {
     bottom: 20px;
@@ -2134,12 +2268,16 @@ body {
     font-size: 1.05rem;
   }
   .btn-nav-cta {
-    padding: 0.35rem 0.65rem;
-    font-size: 0.75rem;
+    padding: 0.32rem 0.65rem;
+    font-size: 0.72rem;
   }
   .lang-switch-btn {
-    padding: 0.25rem 0.45rem;
-    font-size: 0.7rem;
+    padding: 0.22rem 0.45rem;
+    font-size: 0.68rem;
+  }
+  .mobile-menu-btn {
+    width: 34px;
+    height: 34px;
   }
   .hero-section {
     padding: 5rem 0.75rem 2.5rem;
