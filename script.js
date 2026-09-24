@@ -1204,6 +1204,98 @@ document.addEventListener('DOMContentLoaded', () => {
     "Interactive Web UI": {
       id: "Antarmuka website modern bertema dark mode dengan perpaduan glassmorphism, micro-interactions responsif, dan struktur navigasi intuitif.",
       en: "Modern dark-mode website interface crafted with refined glassmorphism, responsive micro-interactions, and intuitive navigation structure."
+    },
+    "Sinar Mega Abadi Architectural Window Film Master Film": {
+      id: "Produksi video komersial arsitektural sinematik instalasi kaca film tolak panas premium untuk villa mewah dan fasad residensial modern.",
+      en: "Cinematic architectural commercial video highlighting premium solar film installation for luxury villas and modern residential facades."
+    },
+    "Sinar Mega Abadi Residential Heat-Shield Showcase": {
+      id: "Video komersial uji efisiensi kaca film terhadap penolakan radiasi ultraviolet dan penjagaan kenyamanan suhu ruangan hunian.",
+      en: "Commercial video demonstrating window film efficiency in rejecting ultraviolet radiation and maintaining comfortable indoor temperatures."
+    },
+    "Sinar Mega Abadi Commercial Window Tint Reel": {
+      id: "Produksi video promosi vertikal media sosial menampilkan ketelitian proses instalasi kaca film kaca arsitektural.",
+      en: "Vertical social media promotional video highlighting the precision craftsmanship of architectural window film installation."
+    },
+    "TSM Land Serpong — Vibe & Me-Time Living Reel": {
+      id: "Video reels storytelling sinematik: 'Rumah bukan cuma bangunan, tapi soal vibe dan me-time yang gak bisa ditawar'.",
+      en: "Cinematic storytelling reel: 'A home is more than just a building—it is about an uncompromising vibe and quality me-time'."
+    },
+    "TSM Land Serpong — Modal 1 Juta Rumah 2 Lantai": {
+      id: "Video promosi kreatif program kemudahan kepemilikan hunian 2 lantai eksklusif dengan booking fee 1 juta rupiah.",
+      en: "Creative promotional video for exclusive 2-story home ownership with an accessible 1 million IDR booking fee program."
+    },
+    "TSM Land Serpong — Cluster Living Experience Reel": {
+      id: "Reels eksplorasi keunggulan kawasan klaster hunian Serpong dengan penataan lanskap hijau dan infrastruktur modern.",
+      en: "Exploratory reel showcasing the advantages of Serpong cluster living with lush green landscaping and modern infrastructure."
+    },
+    "TSM Land Serpong — Smart Home & Security Features": {
+      id: "Video reel interaktif menonjolkan sistem keamanan pintar dan kenyamanan teknologi smart home untuk keluarga modern.",
+      en: "Interactive reel spotlighting intelligent security systems and smart home convenience tailored for modern family living."
+    },
+    "TSM Land Serpong — Family Space & Room Layout Tour": {
+      id: "Video tur ruang keluarga dan kamar tidur utama dengan pencahayaan hangat dan sirkulasi udara optimal.",
+      en: "Video walkthrough of family living spaces and the master bedroom featuring warm ambient lighting and optimal airflow."
+    },
+    "TSM Land Serpong — Modern Serpong Lifestyle Reel": {
+      id: "Sorotan gaya hidup dinamis hunian strategis di Serpong dekat akses tol dan pusat perbelanjaan ternama.",
+      en: "Highlights of dynamic suburban lifestyle in a prime Serpong location with immediate highway access and major shopping hubs."
+    },
+    "TSM Land Serpong — Architectural Detail & Interior Tour": {
+      id: "Detail finishing arsitektural hunian 2 lantai: pemilihan material premium, lantai granit, dan void plafon tinggi.",
+      en: "Architectural finishing details of the 2-story home: premium curated materials, polished granite flooring, and airy high ceilings."
+    },
+    "Lucere Modest Wear Shopee Storefront & E-Commerce Branding": {
+      id: "Desain banner etalase toko online Shopee, promosi diskon musiman, dan identitas visual brand busana muslimah kontemporer.",
+      en: "Shopee online storefront banner design, seasonal sale campaigns, and visual brand identity for contemporary modest fashion."
+    },
+    "Lucere Weekly Social Media Campaign Suite": {
+      id: "Sistem konten Instagram mingguan bertema editorial fesyen dengan palet warna earthy, layout minimalis, dan lookbook katalog produk.",
+      en: "Weekly editorial fashion social campaign system featuring earthy palettes, minimalist layouts, and lookbook product catalogs."
+    },
+    "TSM Land Serpong — Weekend Special Promo Reel": {
+      id: "Video promosi reels event akhir pekan hunian Serpong dengan penawaran subsidi DP, free biaya akad, dan hadiah langsung.",
+      en: "Weekend event promotional reel for Serpong homes featuring down payment subsidies, waived notary fees, and exclusive gifts."
+    },
+    "TSM Land Serpong — Open House Event Reel": {
+      id: "Reels liputan acara open house dan kunjungan langsung calon pembeli ke unit contoh perumahan 2 lantai TSM Land.",
+      en: "Event coverage reel of the community open house with prospective buyers touring TSM Land's 2-story model units."
+    },
+    "TSM Land Serpong — Exclusive Property Investment Reel": {
+      id: "Video komersial edukasi nilai investasi properti dan capital gain kawasan Serpong yang berkembang pesat.",
+      en: "Educational commercial video highlighting real estate investment values and rapid capital appreciation in Serpong."
+    },
+    "TSM Land Serpong — Prime Location & Accessibility Reel": {
+      id: "Visual video keunggulan aksesibilitas: 5 menit gerbang tol, stasiun KRL terdekat, dan pusat fasilitas publik terlengkap.",
+      en: "Visual showcase of prime accessibility: 5 minutes to toll gates, nearby commuter rail stations, and comprehensive civic amenities."
+    },
+    "TSM Land Serpong — Dream Family Residence Reel": {
+      id: "Reels visualisasi konsep hunian impian keluarga muda dengan tata ruang fungsional, pencahayaan alami, dan sirkulasi udara sejuk.",
+      en: "Visual concept reel of dream homes for young families featuring functional layouts, natural light, and refreshing airflow."
+    },
+    "TSM Land Serpong — Contemporary Lifestyle Feature Reel": {
+      id: "Video cinematic lifestyle merepresentasikan kehidupan modern yang tenang dan harmonis di lingkungan perumahan asri.",
+      en: "Cinematic lifestyle reel portraying serene, contemporary living in a lush, family-friendly residential neighborhood."
+    },
+    "TSM Land Serpong — Structural & Facade Precision Reel": {
+      id: "Reels detail konstruksi berkualitas tinggi: pondasi kokoh, fasad bata ekspos modern, dan spesifikasi material bangunan pilihan.",
+      en: "Detailed reel on high-grade construction: solid foundations, modern exposed brick facades, and premium building materials."
+    },
+    "TSM Land Serpong — Comprehensive Digital E-Brochure": {
+      id: "Katalog e-brochure digital 9 halaman menyeluruh mencakup site plan, denah tipe unit, spesifikasi teknis bangunan, dan skema pembiayaan KPR.",
+      en: "Comprehensive 9-page digital e-brochure catalog covering master site plans, unit floor plans, technical specs, and mortgage options."
+    },
+    "TSM Land Serpong — Master Sales Brochure & Billboard Campaign": {
+      id: "Materi cetak brosur promosi lipat dan baliho billboard outdoor boulevard beresolusi tinggi untuk penjualan properti prima Serpong.",
+      en: "High-resolution foldable marketing brochures and outdoor boulevard billboard campaign for prime Serpong real estate sales."
+    },
+    "TSM Land Serpong — Performance Ads Creative Suite": {
+      id: "Rangkaian visual banner iklan berbayar (Meta & Google Ads) dengan copywriting berdaya konversi tinggi dan penawaran cicilan ringan.",
+      en: "Suite of high-converting visual ad creatives (Meta & Google Ads) with compelling copywriting and flexible installment offers."
+    },
+    "Lucere Modest Wear — Signature Collection Lookbook": {
+      id: "Lookbook katalog koleksi busana muslimah kontemporer: perpaduan estetika minimalis, detail kain premium, dan visual storytelling anggun.",
+      en: "Contemporary modest wear lookbook catalog featuring minimalist aesthetics, premium fabric details, and elegant storytelling."
     }
   };
 
