@@ -143,22 +143,79 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // --- 5. Portfolio Category Filtering & Load More Controller ---
+  // --- 5. Portfolio Category Filtering & Curated Infinite Looping Controller ---
+  const portfolioGrid = document.querySelector('.portfolio-grid');
   const filterBtns = document.querySelectorAll('.filter-btn');
   const projectCards = document.querySelectorAll('.project-card');
   const loadMoreBtn = document.getElementById('load-more-btn');
   const loadMoreContainer = document.querySelector('.portfolio-load-more-container');
 
   let currentPortfolioFilter = 'all';
-  let visibleAllCount = 4; // Requirement: Default shows ONLY 4 cards on "Semua Proyek"
+
+  // Ensure an inner track wrapper exists inside portfolioGrid for seamless marquee looping
+  let loopTrack = portfolioGrid ? portfolioGrid.querySelector('.portfolio-loop-track') : null;
+  if (portfolioGrid && !loopTrack) {
+    loopTrack = document.createElement('div');
+    loopTrack.className = 'portfolio-loop-track';
+    loopTrack.id = 'portfolio-loop-track';
+    while (portfolioGrid.firstChild) {
+      loopTrack.appendChild(portfolioGrid.firstChild);
+    }
+    portfolioGrid.appendChild(loopTrack);
+  }
+
+  // Hover & touch event listeners on portfolioGrid to pause/resume looping smoothly
+  if (portfolioGrid) {
+    portfolioGrid.addEventListener('mouseenter', () => {
+      if (portfolioGrid.classList.contains('looping-mode')) {
+        portfolioGrid.classList.add('is-paused');
+      }
+    });
+    portfolioGrid.addEventListener('mouseleave', () => {
+      portfolioGrid.classList.remove('is-paused');
+    });
+    portfolioGrid.addEventListener('touchstart', () => {
+      if (portfolioGrid.classList.contains('looping-mode')) {
+        portfolioGrid.classList.add('is-paused');
+      }
+    }, { passive: true });
+    portfolioGrid.addEventListener('touchend', () => {
+      portfolioGrid.classList.remove('is-paused');
+    });
+  }
 
   function updatePortfolioDisplay() {
+    if (!portfolioGrid || !loopTrack) return;
+
+    // Clean up any cloned cards from previous looping state
+    loopTrack.querySelectorAll('.loop-clone').forEach(el => el.remove());
+
     if (currentPortfolioFilter === 'all') {
-      const allCards = Array.from(projectCards);
-      allCards.forEach((card, index) => {
-        if (index < visibleAllCount) {
+      // 1. ACTIVATING LOOPING MODE FOR "Semua Proyek"
+      portfolioGrid.classList.add('looping-mode');
+      portfolioGrid.classList.remove('is-paused');
+
+      // 2. CURATION: Pick EXACTLY 2 items per category (3D, Branding, Social Media, Video, Flyer)
+      const targetCategories = ['3d', 'logo', 'social', 'motion', 'print'];
+      const curatedCards = [];
+
+      targetCategories.forEach(cat => {
+        let count = 0;
+        for (let card of projectCards) {
+          const cardCats = (card.getAttribute('data-category') || '').trim().split(/\s+/);
+          if (cardCats.includes(cat) && !curatedCards.includes(card)) {
+            curatedCards.push(card);
+            count++;
+            if (count === 2) break;
+          }
+        }
+      });
+
+      // 3. Show only the 10 curated highlight cards and hide all others
+      projectCards.forEach(card => {
+        if (curatedCards.includes(card)) {
           card.style.display = 'flex';
-          setTimeout(() => card.classList.add('in-view'), 30);
+          card.classList.add('in-view');
         } else {
           card.style.display = 'none';
           card.classList.remove('in-view');
@@ -170,17 +227,53 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Show/hide Load More button
-      if (loadMoreContainer) {
-        if (visibleAllCount >= allCards.length) {
-          loadMoreContainer.style.display = 'none';
-        } else {
-          loadMoreContainer.style.display = 'flex';
+      // 4. Flex ordering for the 10 original cards
+      curatedCards.forEach((card, idx) => {
+        card.style.order = idx;
+      });
+
+      // 5. Clone the 10 highlight cards for seamless infinite marquee loop
+      curatedCards.forEach((card, idx) => {
+        const clone = card.cloneNode(true);
+        clone.classList.add('loop-clone');
+        clone.style.display = 'flex';
+        clone.style.order = 10 + idx;
+
+        // Wire up click event for lightbox modal
+        clone.addEventListener('click', () => {
+          if (typeof openLightbox === 'function') {
+            openLightbox(card);
+          }
+        });
+
+        // Wire up on-demand hover video preview
+        const cloneVid = clone.querySelector('video.project-video');
+        if (cloneVid) {
+          clone.addEventListener('mouseenter', () => {
+            cloneVid.play().catch(() => {});
+          });
+          clone.addEventListener('mouseleave', () => {
+            cloneVid.pause();
+            cloneVid.currentTime = 0;
+          });
         }
+
+        loopTrack.appendChild(clone);
+      });
+
+      // In looping mode, hide Load More button container
+      if (loadMoreContainer) {
+        loadMoreContainer.style.display = 'none';
       }
+
     } else {
-      // Category filter active: Show ALL matching category cards
+      // 1. DEACTIVATING LOOPING MODE: Return to normal 3-column CSS Grid
+      portfolioGrid.classList.remove('looping-mode');
+      portfolioGrid.classList.remove('is-paused');
+
+      // 2. Reset inline ordering & show ALL cards belonging to this category
       projectCards.forEach(card => {
+        card.style.order = '';
         const categories = (card.getAttribute('data-category') || '').trim().split(/\s+/);
         if (categories.includes(currentPortfolioFilter)) {
           card.style.display = 'flex';
@@ -196,18 +289,17 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      // Requirement: Sembunyikan tombol "Load More" saat filter kategori lain aktif
+      // Hide Load More button on specific category tabs
       if (loadMoreContainer) {
         loadMoreContainer.style.display = 'none';
       }
     }
   }
 
-  // Load More button click handler: reveal next 4 items
+  // Load More button click handler (kept for safety)
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener('click', () => {
-      visibleAllCount += 4;
-      updatePortfolioDisplay();
+      // No-op in curated looping mode
     });
   }
 
@@ -220,9 +312,6 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.classList.add('active');
 
       currentPortfolioFilter = filter;
-      if (currentPortfolioFilter === 'all') {
-        visibleAllCount = 4; // Reset to 4 items when returning to "Semua Proyek"
-      }
       updatePortfolioDisplay();
     });
   });

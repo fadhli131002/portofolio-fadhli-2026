@@ -1487,6 +1487,90 @@ body {
   gap: 1.5rem;
 }
 
+/* ==========================================================================
+   PORTFOLIO INFINITE MARQUEE LOOPING MODE ("Semua Proyek" Filter)
+   ========================================================================== */
+.portfolio-loop-track {
+  display: contents; /* Default: allows .portfolio-grid to retain normal 3-column CSS grid */
+}
+
+.portfolio-grid.looping-mode {
+  display: block !important;
+  overflow: hidden !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 1rem 0 2rem 0 !important;
+  position: relative !important;
+  mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 4%, black 96%, transparent 100%);
+}
+
+.portfolio-grid.looping-mode .portfolio-loop-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  width: max-content !important;
+  animation: portfolioInfiniteScroll 36s linear infinite !important;
+  will-change: transform;
+}
+
+/* Hover and active pause states: freezing animation on mouse hover or touch */
+.portfolio-grid.looping-mode .portfolio-loop-track:hover,
+.portfolio-grid.looping-mode.is-paused .portfolio-loop-track {
+  animation-play-state: paused !important;
+}
+
+.portfolio-grid.looping-mode .project-card {
+  flex: 0 0 360px !important;
+  width: 360px !important;
+  max-width: 360px !important;
+  margin-right: 1.5rem !important;
+  margin-left: 0 !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  box-sizing: border-box !important;
+  user-select: none;
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease, 
+              box-shadow 0.3s ease;
+}
+
+.portfolio-grid.looping-mode .project-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9), 0 0 25px rgba(255, 255, 255, 0.1);
+  z-index: 10;
+}
+
+@keyframes portfolioInfiniteScroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .portfolio-grid.looping-mode {
+    padding: 0.75rem 0 1.5rem 0 !important;
+    mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2%, black 98%, transparent 100%);
+  }
+
+  .portfolio-grid.looping-mode .project-card {
+    flex: 0 0 290px !important;
+    width: 290px !important;
+    max-width: 290px !important;
+    margin-right: 1.2rem !important;
+  }
+
+  .portfolio-grid.looping-mode .portfolio-loop-track {
+    animation-duration: 26s !important;
+  }
+}
+
 .project-card {
   position: relative;
   border-radius: var(--radius-lg);
